@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/CMakeFiles/bootloader
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/CMakeFiles/bootloader.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/CMakeFiles/bootloader-complete.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

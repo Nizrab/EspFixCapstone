@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ToF Indoor Localization Dashboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+  <style>
+    /* ── Base ───────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --border:   #30363d;
+      --accent:   #58a6ff;
+      --green:    #3fb950;
+      --yellow:   #d29922;
+      --red:      #f85149;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+      --tag-col:  #f78166;
+      --a0:       #58a6ff;
+      --a1:       #3fb950;
+      --a2:       #d2a8ff;
+      --a3:       #ffa657;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+    }
+    #mqtt-badge {
+      margin-left: auto;
+      font-size: .75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 600;
+      transition: background .3s;
+    }
+    #mqtt-badge.connected { background: var(--green); }
+
+    /* ── Main layout ────────────────────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 300px 1fr 260px;
+      gap: 0;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* ── Panels ─────────────────────────────────────────────────────────── */
+    .panel {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 18px 16px;
+      overflow-y: auto;
+    }
+    .panel:last-child { border-right: none; border-left: 1px solid var(--border); }
+    .panel h2 {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── Anchor cards ───────────────────────────────────────────────────── */
+    .anchor-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      transition: border-color .2s;
+    }
+    .anchor-card.online  { border-color: var(--green); }
+    .anchor-card.offline { border-color: var(--red);   opacity: .6; }
+    .anchor-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .anchor-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+    .anchor-card.online  .anchor-dot { background: var(--green); }
+    .anchor-card.offline .anchor-dot { background: var(--red); }
+    .anchor-name { font-weight: 600; font-size: .9rem; }
+    .anchor-status-badge {
+      margin-left: auto;
+      font-size: .65rem;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: var(--border);
+      color: var(--muted);
+    }
+    .anchor-card.online .anchor-status-badge {
+      background: rgba(63,185,80,.15);
+      color: var(--green);
+    }
+    .anchor-meta {
+      font-size: .75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .anchor-dist {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .anchor-dist span { font-size: .75rem; font-weight: 400; color: var(--muted); }
+
+    /* ── Map area ───────────────────────────────────────────────────────── */
+    .map-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      gap: 16px;
+      background: var(--bg);
+    }
+    #room-canvas {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      cursor: crosshair;
+      background: #0a0e14;
+      max-width: 100%;
+      max-height: calc(100vh - 160px);
+    }
+    .map-legend {
+      display: flex;
+      gap: 20px;
+      font-size: .75rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+
+    /* ── Position panel ─────────────────────────────────────────────────── */
+    .pos-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .pos-label {
+      font-size: .7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 4px;
+    }
+    .pos-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .pos-unit { font-size: .85rem; color: var(--muted); font-weight: 400; }
+
+    #fix-indicator {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      display: inline-block;
+      margin-right: 6px;
+      animation: pulse 1.5s infinite;
+    }
+    #fix-indicator.valid { background: var(--green); }
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .35; }
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: .8rem;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-row strong { color: var(--text); }
+
+    /* ── History trail toggle ───────────────────────────────────────────── */
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+    input[type=checkbox] { accent-color: var(--accent); }
+    input[type=range] {
+      accent-color: var(--accent);
+      width: 100%;
+    }
+
+    /* ── Scrollbar ──────────────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────────── -->
+<header>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+       stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+    <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83
+    M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+  </svg>
+  <h1>ToF Indoor Localization &nbsp;—&nbsp; Live Dashboard</h1>
+  <div id="mqtt-badge">MQTT ✗</div>
+</header>
+
+<!-- ── Layout ──────────────────────────────────────────────────────────────── -->
+<div class="layout">
+
+  <!-- Left panel: Anchors -->
+  <div class="panel" id="anchors-panel">
+    <h2>Anchors</h2>
+    <div id="anchor-list"></div>
+  </div>
+
+  <!-- Centre: Canvas map -->
+  <div class="map-area">
+    <canvas id="room-canvas" width="640" height="512"></canvas>
+    <div class="map-legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--accent)"></div> Anchor
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--tag-col)"></div> Tag (current)
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:rgba(247,129,102,.3)"></div> History trail
+      </div>
+    </div>
+  </div>
+
+  <!-- Right panel: Position -->
+  <div class="panel" id="position-panel">
+    <h2>Tag Position</h2>
+
+    <div class="pos-card">
+      <div class="pos-label">
+        <span id="fix-indicator"></span>Fix Status
+      </div>
+      <div id="fix-text" style="font-size:.85rem;color:var(--muted)">Waiting for data…</div>
+    </div>
+
+    <div class="pos-card">
+      <div class="pos-label">X (horizontal)</div>
+      <div class="pos-value" id="pos-x">—<span class="pos-unit"> cm</span></div>
+    </div>
+
+    <div class="pos-card">
+      <div class="pos-label">Y (vertical)</div>
+      <div class="pos-value" id="pos-y">—<span class="pos-unit"> cm</span></div>
+    </div>
+
+    <div class="pos-card">
+      <div class="pos-label">Room</div>
+      <div style="font-size:.85rem;color:var(--muted)" id="room-dims">
+        {{ room_width }} × {{ room_height }} cm
+      </div>
+    </div>
+
+    <div style="margin-top:16px">
+      <div class="stat-row"><span>Updates</span><strong id="stat-updates">0</strong></div>
+      <div class="stat-row"><span>Anchors visible</span><strong id="stat-anchors">0</strong></div>
+      <div class="stat-row"><span>Last fix</span><strong id="stat-lastfix">—</strong></div>
+      <div class="stat-row"><span>Rate</span><strong id="stat-rate">—</strong></div>
+    </div>
+
+    <div class="toggle-row" style="margin-top:18px">
+      <input type="checkbox" id="show-circles" checked/>
+      <label for="show-circles">Range circles</label>
+    </div>
+    <div class="toggle-row">
+      <input type="checkbox" id="show-trail" checked/>
+      <label for="show-trail">History trail</label>
+    </div>
+    <div class="toggle-row" style="flex-direction:column;align-items:flex-start;gap:4px">
+      <label for="trail-len" style="font-size:.75rem">Trail length: <span id="trail-len-val">20</span></label>
+      <input type="range" id="trail-len" min="3" max="50" value="20"/>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── JavaScript ───────────────────────────────────────────────────────────── -->
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+//  Config (injected from Flask)
+// ─────────────────────────────────────────────────────────────────────────────
+const ROOM_W = {{ room_width }};
+const ROOM_H = {{ room_height }};
+
+// Anchor colours matching CSS variables
+const ANCHOR_COLORS = ["#58a6ff","#3fb950","#d2a8ff","#ffa657"];
+const ANCHOR_LABELS = ["A0 (BL)","A1 (BR)","A2 (TR)","A3 (TL)"];
+const ANCHOR_CORNERS = [
+  {x:0,      y:0},
+  {x:ROOM_W, y:0},
+  {x:ROOM_W, y:ROOM_H},
+  {x:0,      y:ROOM_H},
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  State
+// ─────────────────────────────────────────────────────────────────────────────
+let anchorData    = {};     // id → {x_cm, y_cm, status, ...}
+let distances     = {};     // id → cm
+let posHistory    = [];     // [{x_cm, y_cm}, ...]
+let currentPos    = null;   // {x_cm, y_cm} or null
+let updateCount   = 0;
+let lastFixTime   = null;
+let lastFixTs     = 0;
+let updateTimes   = [];     // ring-buffer for rate calculation
+
+// UI state
+let showCircles = true;
+let showTrail   = true;
+let trailLen    = 20;
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Canvas setup
+// ─────────────────────────────────────────────────────────────────────────────
+const canvas = document.getElementById("room-canvas");
+const ctx    = canvas.getContext("2d");
+
+// Initialise default anchor positions
+for (let i = 0; i < 4; i++) {
+  anchorData[i] = {
+    anchor_id: i, x_cm: ANCHOR_CORNERS[i].x, y_cm: ANCHOR_CORNERS[i].y,
+    ssid: `TOF_ANCHOR_${i}`, bssid: "", channel: 6, status: "unknown"
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Coordinate transform: room cm → canvas px
+// ─────────────────────────────────────────────────────────────────────────────
+const PAD = 52;  // pixels of padding
+
+function toCanvasX(xcm) {
+  return PAD + (xcm / ROOM_W) * (canvas.width  - 2*PAD);
+}
+function toCanvasY(ycm) {
+  // Y-axis: y=0 is bottom of room, canvas y increases downward
+  return (canvas.height - PAD) - (ycm / ROOM_H) * (canvas.height - 2*PAD);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Drawing
+// ─────────────────────────────────────────────────────────────────────────────
+function drawRoom() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // ── Grid ──────────────────────────────────────────────────────────────────
+  ctx.strokeStyle = "rgba(48,54,61,0.6)";
+  ctx.lineWidth   = 1;
+  const gridStep = 50; // cm
+  for (let x = 0; x <= ROOM_W; x += gridStep) {
+    const cx = toCanvasX(x);
+    ctx.beginPath(); ctx.moveTo(cx, PAD); ctx.lineTo(cx, canvas.height - PAD);
+    ctx.stroke();
+  }
+  for (let y = 0; y <= ROOM_H; y += gridStep) {
+    const cy = toCanvasY(y);
+    ctx.beginPath(); ctx.moveTo(PAD, cy); ctx.lineTo(canvas.width - PAD, cy);
+    ctx.stroke();
+  }
+
+  // ── Room border ────────────────────────────────────────────────────────────
+  ctx.strokeStyle = "rgba(88,166,255,0.35)";
+  ctx.lineWidth   = 2;
+  ctx.strokeRect(PAD, PAD, canvas.width - 2*PAD, canvas.height - 2*PAD);
+
+  // ── Axis labels ───────────────────────────────────────────────────────────
+  ctx.fillStyle = "rgba(139,148,158,0.7)";
+  ctx.font      = "11px monospace";
+  ctx.textAlign = "center";
+  for (let x = 0; x <= ROOM_W; x += 100) {
+    ctx.fillText(x + "cm", toCanvasX(x), canvas.height - PAD + 18);
+  }
+  ctx.textAlign = "right";
+  ctx.save(); ctx.translate(PAD - 20, toCanvasY(ROOM_H/2)); ctx.rotate(-Math.PI/2);
+  ctx.textAlign = "center"; ctx.fillText(`${ROOM_H} cm`, 0, 0); ctx.restore();
+
+  // ── Range circles ─────────────────────────────────────────────────────────
+  if (showCircles) {
+    for (const [id, d] of Object.entries(distances)) {
+      const i     = parseInt(id);
+      const aInfo = anchorData[i];
+      if (!aInfo) continue;
+      const rPx  = (d / ROOM_W) * (canvas.width - 2*PAD);
+      const cx   = toCanvasX(aInfo.x_cm);
+      const cy   = toCanvasY(aInfo.y_cm);
+      ctx.beginPath();
+      ctx.arc(cx, cy, rPx, 0, 2*Math.PI);
+      ctx.strokeStyle = ANCHOR_COLORS[i % 4] + "40";
+      ctx.lineWidth   = 1.5;
+      ctx.setLineDash([4,4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  // ── History trail ─────────────────────────────────────────────────────────
+  if (showTrail && posHistory.length > 1) {
+    const trail = posHistory.slice(-trailLen);
+    ctx.beginPath();
+    ctx.moveTo(toCanvasX(trail[0].x_cm), toCanvasY(trail[0].y_cm));
+    for (let i = 1; i < trail.length; i++) {
+      ctx.lineTo(toCanvasX(trail[i].x_cm), toCanvasY(trail[i].y_cm));
+    }
+    ctx.strokeStyle = "rgba(247,129,102,0.4)";
+    ctx.lineWidth   = 2;
+    ctx.lineJoin    = "round";
+    ctx.stroke();
+
+    // Faded dots along trail
+    trail.forEach((p, i) => {
+      const alpha = 0.12 + 0.5 * (i / trail.length);
+      ctx.beginPath();
+      ctx.arc(toCanvasX(p.x_cm), toCanvasY(p.y_cm), 4, 0, 2*Math.PI);
+      ctx.fillStyle = `rgba(247,129,102,${alpha})`;
+      ctx.fill();
+    });
+  }
+
+  // ── Anchors ────────────────────────────────────────────────────────────────
+  for (const [idStr, a] of Object.entries(anchorData)) {
+    const i  = parseInt(idStr);
+    const cx = toCanvasX(a.x_cm);
+    const cy = toCanvasY(a.y_cm);
+    const col = ANCHOR_COLORS[i % 4];
+    const online = a.status === "online";
+
+    // Outer glow
+    const glow = ctx.createRadialGradient(cx, cy, 4, cx, cy, 22);
+    glow.addColorStop(0, col + "40");
+    glow.addColorStop(1, col + "00");
+    ctx.beginPath(); ctx.arc(cx, cy, 22, 0, 2*Math.PI);
+    ctx.fillStyle = glow; ctx.fill();
+
+    // Square body
+    ctx.fillStyle   = online ? col : "#8b949e";
+    ctx.strokeStyle = "#0d1117";
+    ctx.lineWidth   = 2;
+    ctx.beginPath();
+    ctx.roundRect(cx - 11, cy - 11, 22, 22, 4);
+    ctx.fill(); ctx.stroke();
+
+    // Antenna icon
+    ctx.strokeStyle = "#0d1117";
+    ctx.lineWidth   = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx, cy - 5); ctx.lineTo(cx, cy - 11); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy - 5, 4, 0, 2*Math.PI);
+    ctx.strokeStyle = "#0d1117"; ctx.fillStyle = "#fff"; ctx.fill(); ctx.stroke();
+
+    // Label
+    ctx.fillStyle = col;
+    ctx.font      = "bold 12px monospace";
+    ctx.textAlign = "center";
+    ctx.fillText(ANCHOR_LABELS[i], cx, cy + 28);
+
+    // Distance label
+    if (distances[i] !== undefined) {
+      ctx.fillStyle = "rgba(230,237,243,0.8)";
+      ctx.font      = "10px monospace";
+      ctx.fillText(`${Math.round(distances[i])} cm`, cx, cy + 40);
+    }
+  }
+
+  // ── Tag position ──────────────────────────────────────────────────────────
+  if (currentPos) {
+    const tx = toCanvasX(currentPos.x_cm);
+    const ty = toCanvasY(currentPos.y_cm);
+
+    // Outer pulse ring
+    ctx.beginPath(); ctx.arc(tx, ty, 20, 0, 2*Math.PI);
+    ctx.strokeStyle = "rgba(248,81,73,0.25)";
+    ctx.lineWidth   = 8; ctx.stroke();
+
+    // Middle ring
+    ctx.beginPath(); ctx.arc(tx, ty, 14, 0, 2*Math.PI);
+    ctx.strokeStyle = "rgba(248,81,73,0.5)";
+    ctx.lineWidth   = 3; ctx.stroke();
+
+    // Core
+    ctx.beginPath(); ctx.arc(tx, ty, 8, 0, 2*Math.PI);
+    ctx.fillStyle   = "var(--tag-col,#f78166)"; ctx.fill();
+
+    // Crosshair
+    ctx.strokeStyle = "rgba(255,255,255,0.6)";
+    ctx.lineWidth   = 1;
+    ctx.beginPath(); ctx.moveTo(tx-18,ty); ctx.lineTo(tx+18,ty); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(tx,ty-18); ctx.lineTo(tx,ty+18); ctx.stroke();
+
+    // Coordinate label
+    ctx.fillStyle  = "var(--tag-col,#f78166)";
+    ctx.font       = "bold 11px monospace";
+    ctx.textAlign  = "center";
+    ctx.fillText(`(${Math.round(currentPos.x_cm)}, ${Math.round(currentPos.y_cm)}) cm`, tx, ty - 24);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Anchor cards (left panel)
+// ─────────────────────────────────────────────────────────────────────────────
+function renderAnchorCards() {
+  const list = document.getElementById("anchor-list");
+  list.innerHTML = "";
+  for (let i = 0; i < 4; i++) {
+    const a   = anchorData[i] || {};
+    const d   = distances[i];
+    const col = ANCHOR_COLORS[i];
+    const online = a.status === "online";
+
+    list.insertAdjacentHTML("beforeend", `
+      <div class="anchor-card ${online ? 'online' : (a.status === 'offline' ? 'offline' : '')}">
+        <div class="anchor-card-header">
+          <div class="anchor-dot"></div>
+          <span class="anchor-name" style="color:${col}">${ANCHOR_LABELS[i]}</span>
+          <span class="anchor-status-badge">${a.status || 'unknown'}</span>
+        </div>
+        <div class="anchor-meta">
+          Position: (${a.x_cm ?? ANCHOR_CORNERS[i].x} cm, ${a.y_cm ?? ANCHOR_CORNERS[i].y} cm)<br/>
+          SSID: ${a.ssid || `TOF_ANCHOR_${i}`}<br/>
+          Ch: ${a.channel || 6}
+          ${a.bssid ? `&nbsp;|&nbsp;${a.bssid}` : ''}
+        </div>
+        <div class="anchor-dist" style="color:${col}">
+          ${d !== undefined ? Math.round(d) : '—'}<span> cm</span>
+        </div>
+      </div>
+    `);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Position panel
+// ─────────────────────────────────────────────────────────────────────────────
+function updatePositionPanel(pos) {
+  const ind  = document.getElementById("fix-indicator");
+  const txt  = document.getElementById("fix-text");
+
+  if (pos && pos.valid && pos.x_cm !== null) {
+    ind.className = "valid";
+    txt.textContent = "3-D trilateration fix";
+    document.getElementById("pos-x").innerHTML = `${pos.x_cm.toFixed(1)}<span class="pos-unit"> cm</span>`;
+    document.getElementById("pos-y").innerHTML = `${pos.y_cm.toFixed(1)}<span class="pos-unit"> cm</span>`;
+    lastFixTime = new Date();
+  } else {
+    ind.className = "";
+    txt.textContent = "Insufficient anchors";
+  }
+
+  updateCount++;
+  const now = Date.now();
+  updateTimes.push(now);
+  if (updateTimes.length > 20) updateTimes.shift();
+
+  document.getElementById("stat-updates").textContent  = updateCount;
+  document.getElementById("stat-anchors").textContent  = Object.keys(distances).length;
+  if (lastFixTime) {
+    document.getElementById("stat-lastfix").textContent = lastFixTime.toLocaleTimeString();
+  }
+
+  // Rate
+  if (updateTimes.length >= 2) {
+    const span = (updateTimes[updateTimes.length-1] - updateTimes[0]) / 1000;
+    const rate  = (updateTimes.length - 1) / span;
+    document.getElementById("stat-rate").textContent = `${rate.toFixed(1)} Hz`;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Socket.IO
+// ─────────────────────────────────────────────────────────────────────────────
+const socket = io();
+const badge  = document.getElementById("mqtt-badge");
+
+socket.on("connect", () => {
+  badge.textContent  = "MQTT ✓";
+  badge.className    = "connected";
+  // Fetch initial state via REST
+  fetch("/api/state").then(r=>r.json()).then(data => {
+    if (data.anchors) {
+      data.anchors.forEach(a => { anchorData[a.anchor_id] = a; });
+    }
+    if (data.distances) distances = data.distances;
+    if (data.history)   posHistory = data.history.filter(p=>p.valid && p.x_cm !== null)
+                                       .map(p=>({x_cm:p.x_cm,y_cm:p.y_cm}));
+    if (data.position && data.position.valid) currentPos = data.position;
+    renderAnchorCards();
+    drawRoom();
+  });
+});
+
+socket.on("disconnect", () => {
+  badge.textContent = "MQTT ✗";
+  badge.className   = "";
+});
+
+socket.on("position_update", (data) => {
+  // Update distances
+  if (data.distances) {
+    distances = {};
+    for (const [k, v] of Object.entries(data.distances)) {
+      distances[parseInt(k)] = v;
+    }
+  }
+  // Update position
+  if (data.valid && data.x_cm !== null) {
+    currentPos = data;
+    posHistory.push({x_cm: data.x_cm, y_cm: data.y_cm});
+    if (posHistory.length > 100) posHistory.shift();
+  }
+  updatePositionPanel(data);
+  renderAnchorCards();
+  drawRoom();
+});
+
+socket.on("anchor_status", (data) => {
+  if (anchorData[data.anchor_id]) {
+    anchorData[data.anchor_id].status = data.status;
+    renderAnchorCards();
+    drawRoom();
+  }
+});
+
+socket.on("tag_status", (data) => {
+  // Could show a tag online/offline badge
+  console.log("Tag status:", data.status);
+});
+
+socket.on("init", (data) => {
+  console.log("Init from server:", data);
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  UI Controls
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById("show-circles").addEventListener("change", e => {
+  showCircles = e.target.checked; drawRoom();
+});
+document.getElementById("show-trail").addEventListener("change", e => {
+  showTrail = e.target.checked; drawRoom();
+});
+document.getElementById("trail-len").addEventListener("input", e => {
+  trailLen = parseInt(e.target.value);
+  document.getElementById("trail-len-val").textContent = trailLen;
+  drawRoom();
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Responsive canvas resize
+// ─────────────────────────────────────────────────────────────────────────────
+function resizeCanvas() {
+  const mapArea = canvas.parentElement;
+  const maxW    = mapArea.clientWidth  - 48;
+  const maxH    = mapArea.clientHeight - 100;
+  const aspect  = ROOM_W / ROOM_H;
+  let w = Math.min(maxW, maxH * aspect);
+  let h = w / aspect;
+  if (h > maxH) { h = maxH; w = h * aspect; }
+  canvas.width  = Math.max(320, Math.round(w));
+  canvas.height = Math.max(200, Math.round(h));
+  drawRoom();
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+// Initial render
+renderAnchorCards();
+drawRoom();
+</script>
+</body>
+</html>

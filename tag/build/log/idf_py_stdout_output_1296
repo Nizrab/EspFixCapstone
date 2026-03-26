@@ -1,0 +1,562 @@
+Command: C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\tof_tag.elf C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\bootloader\bootloader.elf --force-color -m 'C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM13'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 26 2026 17:44:00[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19804h (104452) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0002982c vaddr=3ffb0000 size=04528h ( 17704) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0002dd5c vaddr=40080000 size=022bch (  8892) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84f50h (544592) map[0m
+[0;32mI (329) esp_image: segment 4: paddr=000b4f78 vaddr=400822bc size=1333ch ( 78652) load[0m
+[0;32mI (361) esp_image: segment 5: paddr=000c82bc vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (372) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (372) boot: Disabling RNG early entropy source...[0m
+[0;32mI (383) cpu_start: Multicore app[0m
+[0;32mI (391) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (391) cpu_start: Pro cpu start user code[0m
+[0;32mI (391) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (393) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     tof_tag[0m
+[0;32mI (401) app_init: App version:      1[0m
+[0;32mI (404) app_init: Compile time:     Mar 26 2026 17:43:40[0m
+[0;32mI (409) app_init: ELF file SHA256:  66e30c781...[0m
+[0;32mI (413) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (417) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (421) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (425) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (440) heap_init: At 3FFB8B38 len 000274C8 (157 KiB): DRAM[0m
+[0;32mI (445) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (451) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (456) heap_init: At 400955F8 len 0000AA08 (42 KiB): IRAM[0m
+[0;33mW (463) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;32mI (483) main_task: Started on CPU0[0m
+[0;32mI (493) main_task: Calling app_main()[0m
+[0;32mI (493) TAG: === RSSI Trilateration Tag 2 starting ===[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc04d0, prio:23, stack:6656, core=0[0m
+[0;32mI (513) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (513) wifi:wifi certification version: v7.0[0m
+[0;32mI (513) wifi:config NVS flash: enabled[0m
+[0;32mI (513) wifi:config nano formatting: disabled[0m
+[0;32mI (523) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (523) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (533) wifi:Init management short buffer num: 32[0m
+[0;32mI (533) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (533) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (543) wifi:Init static rx buffer num: 10[0m
+[0;32mI (543) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (553) wifi_init: rx ba win: 6[0m
+[0;32mI (553) wifi_init: accept mbox: 6[0m
+[0;32mI (553) wifi_init: tcpip mbox: 32[0m
+[0;32mI (553) wifi_init: udp mbox: 6[0m
+[0;32mI (563) wifi_init: tcp mbox: 6[0m
+[0;32mI (563) wifi_init: tcp tx win: 5760[0m
+[0;32mI (563) wifi_init: tcp rx win: 5760[0m
+[0;32mI (573) wifi_init: tcp mss: 1440[0m
+[0;32mI (573) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (573) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (583) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (663) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (683) wifi:mode : sta (00:4b:12:9b:ed:e4)[0m
+[0;32mI (683) wifi:enable tsf[0m
+[0;32mI (1683) main_task: Returned from app_main()[0m
+[0;32mI (4683) TAG: ========================================[0m
+[0;32mI (4683) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (4683) TAG: ========================================[0m
+[0;32mI (4683) TAG:   TOF_ANCHOR_3    RSSI: -52.2 dBm  Dist:  283.0 cm[0m
+[0;33mW (4693) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (4693) TAG: ========================================[0m
+[0;32mI (8693) TAG: ========================================[0m
+[0;32mI (8693) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (8693) TAG: ========================================[0m
+[0;32mI (8693) TAG:   TOF_ANCHOR_3    RSSI: -51.6 dBm  Dist:  268.9 cm[0m
+[0;33mW (8703) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (8703) TAG: ========================================[0m
+[0;32mI (12703) TAG: ========================================[0m
+[0;32mI (12703) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (12703) TAG: ========================================[0m
+[0;32mI (12703) TAG:   TOF_ANCHOR_3    RSSI: -51.4 dBm  Dist:  264.4 cm[0m
+[0;33mW (12713) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (12713) TAG: ========================================[0m
+[0;32mI (16723) TAG: ========================================[0m
+[0;32mI (16723) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (16723) TAG: ========================================[0m
+[0;32mI (16723) TAG:   TOF_ANCHOR_3    RSSI: -53.4 dBm  Dist:  313.5 cm[0m
+[0;33mW (16733) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (16733) TAG: ========================================[0m
+[0;32mI (20743) TAG: ========================================[0m
+[0;32mI (20743) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (20743) TAG: ========================================[0m
+[0;32mI (20743) TAG:   TOF_ANCHOR_3    RSSI: -52.2 dBm  Dist:  283.0 cm[0m
+[0;33mW (20753) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (20753) TAG: ========================================[0m
+[0;32mI (24763) TAG: ========================================[0m
+[0;32mI (24763) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (24763) TAG: ========================================[0m
+[0;32mI (24763) TAG:   TOF_ANCHOR_3    RSSI: -62.4 dBm  Dist:  675.5 cm[0m
+[0;33mW (24773) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (24773) TAG: ========================================[0m
+[0;32mI (28783) TAG: ========================================[0m
+[0;32mI (28783) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (28783) TAG: ========================================[0m
+[0;32mI (28783) TAG:   TOF_ANCHOR_3    RSSI: -50.8 dBm  Dist:  251.2 cm[0m
+[0;33mW (28793) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (28793) TAG: ========================================[0m
+[0;32mI (32803) TAG: ========================================[0m
+[0;32mI (32803) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (32803) TAG: ========================================[0m
+[0;32mI (32803) TAG:   TOF_ANCHOR_3    RSSI: -54.6 dBm  Dist:  347.3 cm[0m
+[0;33mW (32813) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (32813) TAG: ========================================[0m
+[0;32mI (36823) TAG: ========================================[0m
+[0;32mI (36823) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (36823) TAG: ========================================[0m
+[0;32mI (36823) TAG:   TOF_ANCHOR_3    RSSI: -49.2 dBm  Dist:  219.1 cm[0m
+[0;33mW (36833) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (36833) TAG: ========================================[0m
+[0;32mI (40843) TAG: ========================================[0m
+[0;32mI (40843) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (40843) TAG: ========================================[0m
+[0;32mI (40843) TAG:   TOF_ANCHOR_3    RSSI: -45.8 dBm  Dist:  164.0 cm[0m
+[0;33mW (40853) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (40853) TAG: ========================================[0m
+[0;32mI (44863) TAG: ========================================[0m
+[0;32mI (44863) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (44863) TAG: ========================================[0m
+[0;32mI (44863) TAG:   TOF_ANCHOR_3    RSSI: -47.8 dBm  Dist:  194.5 cm[0m
+[0;33mW (44873) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (44873) TAG: ========================================[0m
+[0;32mI (48883) TAG: ========================================[0m
+[0;32mI (48883) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (48883) TAG: ========================================[0m
+[0;32mI (48883) TAG:   TOF_ANCHOR_3    RSSI: -46.2 dBm  Dist:  169.7 cm[0m
+[0;33mW (48893) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (48893) TAG: ========================================[0m
+[0;32mI (52903) TAG: ========================================[0m
+[0;32mI (52903) TAG: RSSI Readings — Tag 1[0m
+[0;32mI (52903) TAG: ========================================[0m
+[0;32mI (52903) TAG:   TOF_ANCHOR_3    RSSI: -46.6 dBm  Dist:  175.6 cm[0m
+[0;33mW (52913) TAG:   Need at least 2 anchors for position[0m
+[0;32mI (52913) TAG: ========================================[0m
+[0;32mI (56923) TAG: ========================================[0m
+[0;32mI (56923) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (56923) TAG: ========================================[0m
+[0;32mI (56923) TAG:   TOF_ANCHOR_3    RSSI: -51.4 dBm  Dist:  264.4 cm[0m
+[0;32mI (56933) TAG:   TOF_ANCHOR_1    RSSI: -72.0 dBm  Dist: 1531.7 cm[0m
+[0;32mI (56933) TAG: ----------------------------------------[0m
+[0;32mI (56943) TAG:   Position: X=44.3 cm  Y=255.7 cm[0m
+[0;32mI (56943) TAG: ========================================[0m
+[0;32mI (60953) TAG: ========================================[0m
+[0;32mI (60953) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (60953) TAG: ========================================[0m
+[0;32mI (60953) TAG:   TOF_ANCHOR_3    RSSI: -49.2 dBm  Dist:  219.1 cm[0m
+[0;32mI (60963) TAG:   TOF_ANCHOR_1    RSSI: -59.0 dBm  Dist:  505.5 cm[0m
+[0;32mI (60963) TAG: ----------------------------------------[0m
+[0;32mI (60973) TAG:   Position: X=90.9 cm  Y=209.1 cm[0m
+[0;32mI (60973) TAG: ========================================[0m
+[0;32mI (64983) TAG: ========================================[0m
+[0;32mI (64983) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (64983) TAG: ========================================[0m
+[0;32mI (64983) TAG:   TOF_ANCHOR_3    RSSI: -45.0 dBm  Dist:  153.2 cm[0m
+[0;32mI (64993) TAG:   TOF_ANCHOR_1    RSSI: -64.0 dBm  Dist:  774.3 cm[0m
+[0;32mI (64993) TAG: ----------------------------------------[0m
+[0;32mI (65003) TAG:   Position: X=49.8 cm  Y=250.2 cm[0m
+[0;32mI (65003) TAG: ========================================[0m
+[0;32mI (69013) TAG: ========================================[0m
+[0;32mI (69013) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (69013) TAG: ========================================[0m
+[0;32mI (69013) TAG:   TOF_ANCHOR_3    RSSI: -48.4 dBm  Dist:  204.7 cm[0m
+[0;32mI (69023) TAG:   TOF_ANCHOR_1    RSSI: -64.0 dBm  Dist:  774.3 cm[0m
+[0;32mI (69023) TAG: ----------------------------------------[0m
+[0;32mI (69033) TAG:   Position: X=62.9 cm  Y=237.1 cm[0m
+[0;32mI (69033) TAG: ========================================[0m
+[0;32mI (73043) TAG: ========================================[0m
+[0;32mI (73043) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (73043) TAG: ========================================[0m
+[0;32mI (73043) TAG:   TOF_ANCHOR_3    RSSI: -56.4 dBm  Dist:  405.0 cm[0m
+[0;32mI (73053) TAG:   TOF_ANCHOR_1    RSSI: -63.8 dBm  Dist:  761.2 cm[0m
+[0;32mI (73053) TAG: ----------------------------------------[0m
+[0;32mI (73063) TAG:   Position: X=104.3 cm  Y=195.7 cm[0m
+[0;32mI (73063) TAG: ========================================[0m
+[0;32mI (77073) TAG: ========================================[0m
+[0;32mI (77073) TAG: RSSI Readings — Tag 2[0m
+[0;32mI (77073) TAG: ========================================[0m
+[0;32mI (77073) TAG:   TOF_ANCHOR_3    RSSI: -56.8 dBm  Dist:  419.0 cm[0m
+[0;32mI (77083) TAG:   TOF_ANCHOR_1    RSSI: -58.6 dBm  Dist:  488.5 cm[0m
+[0;32mI (77083) TAG: ----------------------------------------[0m
+[0;32mI (77093) TAG:   Position: X=138.5 cm  Y=161.5 cm[0m
+[0;32mI (77093) TAG: ========================================[0m
+[0;32mI (81103) TAG: ========================================[0m
+[0;32mI (81103) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (81103) TAG: ========================================[0m
+[0;32mI (81103) TAG:   TOF_ANCHOR_3    RSSI: -56.0 dBm  Dist:  391.4 cm[0m
+[0;32mI (81113) TAG:   TOF_ANCHOR_1    RSSI: -54.2 dBm  Dist:  335.7 cm[0m
+[0;32mI (81113) TAG:   TOF_ANCHOR_0    RSSI: -55.0 dBm  Dist:  359.4 cm[0m
+[0;32mI (81123) TAG: ----------------------------------------[0m
+[0;32mI (81123) TAG:   Position: X=177.5 cm  Y=110.0 cm[0m
+[0;32mI (81133) TAG: ========================================[0m
+[0;32mI (85133) TAG: ========================================[0m
+[0;32mI (85133) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (85133) TAG: ========================================[0m
+[0;32mI (85133) TAG:   TOF_ANCHOR_3    RSSI: -58.4 dBm  Dist:  480.3 cm[0m
+[0;32mI (85143) TAG:   TOF_ANCHOR_1    RSSI: -65.0 dBm  Dist:  843.2 cm[0m
+[0;32mI (85143) TAG:   TOF_ANCHOR_0    RSSI: -61.4 dBm  Dist:  620.3 cm[0m
+[0;32mI (85153) TAG: ----------------------------------------[0m
+[0;32mI (85153) TAG:   Position: X=-393.7 cm  Y=406.8 cm[0m
+[0;32mI (85163) TAG: ========================================[0m
+[0;32mI (89163) TAG: ========================================[0m
+[0;32mI (89163) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (89163) TAG: ========================================[0m
+[0;32mI (89163) TAG:   TOF_ANCHOR_3    RSSI: -63.8 dBm  Dist:  761.2 cm[0m
+[0;32mI (89173) TAG:   TOF_ANCHOR_1    RSSI: -71.2 dBm  Dist: 1430.7 cm[0m
+[0;32mI (89173) TAG:   TOF_ANCHOR_0    RSSI: -65.0 dBm  Dist:  843.2 cm[0m
+[0;32mI (89183) TAG: ----------------------------------------[0m
+[0;32mI (89183) TAG:   Position: X=-2076.7 cm  Y=369.3 cm[0m
+[0;32mI (89193) TAG: ========================================[0m
+[0;32mI (93193) TAG: ========================================[0m
+[0;32mI (93193) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (93193) TAG: ========================================[0m
+[0;32mI (93193) TAG:   TOF_ANCHOR_3    RSSI: -58.6 dBm  Dist:  488.5 cm[0m
+[0;32mI (93203) TAG:   TOF_ANCHOR_1    RSSI: -72.0 dBm  Dist: 1531.7 cm[0m
+[0;32mI (93203) TAG:   TOF_ANCHOR_0    RSSI: -62.6 dBm  Dist:  687.1 cm[0m
+[0;32mI (93213) TAG: ----------------------------------------[0m
+[0;32mI (93213) TAG:   Position: X=-2973.5 cm  Y=539.1 cm[0m
+[0;32mI (93223) TAG: ========================================[0m
+[0;32mI (97223) TAG: ========================================[0m
+[0;32mI (97223) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (97223) TAG: ========================================[0m
+[0;32mI (97223) TAG:   TOF_ANCHOR_3    RSSI: -59.6 dBm  Dist:  532.0 cm[0m
+[0;32mI (97233) TAG:   TOF_ANCHOR_1    RSSI: -68.8 dBm  Dist: 1165.9 cm[0m
+[0;32mI (97233) TAG:   TOF_ANCHOR_0    RSSI: -63.2 dBm  Dist:  723.2 cm[0m
+[0;32mI (97243) TAG: ----------------------------------------[0m
+[0;32mI (97243) TAG:   Position: X=-1243.9 cm  Y=550.0 cm[0m
+[0;32mI (97253) TAG: ========================================[0m
+[0;32mI (101253) TAG: ========================================[0m
+[0;32mI (101253) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (101253) TAG: ========================================[0m
+[0;32mI (101253) TAG:   TOF_ANCHOR_3    RSSI: -63.4 dBm  Dist:  735.6 cm[0m
+[0;32mI (101263) TAG:   TOF_ANCHOR_1    RSSI: -72.0 dBm  Dist: 1531.7 cm[0m
+[0;32mI (101263) TAG:   TOF_ANCHOR_0    RSSI: -64.6 dBm  Dist:  814.9 cm[0m
+[0;32mI (101273) TAG: ----------------------------------------[0m
+[0;32mI (101273) TAG:   Position: X=-2653.6 cm  Y=354.9 cm[0m
+[0;32mI (101283) TAG: ========================================[0m
+[0;32mI (105283) TAG: ========================================[0m
+[0;32mI (105283) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (105283) TAG: ========================================[0m
+[0;32mI (105283) TAG:   TOF_ANCHOR_3    RSSI: -61.4 dBm  Dist:  620.3 cm[0m
+[0;32mI (105293) TAG:   TOF_ANCHOR_1    RSSI: -68.8 dBm  Dist: 1165.9 cm[0m
+[0;32mI (105293) TAG:   TOF_ANCHOR_0    RSSI: -64.0 dBm  Dist:  774.3 cm[0m
+[0;32mI (105303) TAG: ----------------------------------------[0m
+[0;32mI (105303) TAG:   Position: X=-1116.5 cm  Y=507.9 cm[0m
+[0;32mI (105313) TAG: ========================================[0m
+[0;32mI (109313) TAG: ========================================[0m
+[0;32mI (109313) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (109313) TAG: ========================================[0m
+[0;32mI (109313) TAG:   TOF_ANCHOR_3    RSSI: -59.0 dBm  Dist:  505.5 cm[0m
+[0;32mI (109323) TAG:   TOF_ANCHOR_1    RSSI: -66.2 dBm  Dist:  934.1 cm[0m
+[0;32mI (109323) TAG:   TOF_ANCHOR_0    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (109333) TAG: ----------------------------------------[0m
+[0;32mI (109333) TAG:   Position: X=-725.2 cm  Y=303.0 cm[0m
+[0;32mI (109343) TAG: ========================================[0m
+[0;32mI (113343) TAG: ========================================[0m
+[0;32mI (113343) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (113343) TAG: ========================================[0m
+[0;32mI (113343) TAG:   TOF_ANCHOR_3    RSSI: -59.2 dBm  Dist:  514.2 cm[0m
+[0;32mI (113353) TAG:   TOF_ANCHOR_1    RSSI: -65.8 dBm  Dist:  902.7 cm[0m
+[0;32mI (113353) TAG:   TOF_ANCHOR_0    RSSI: -61.4 dBm  Dist:  620.3 cm[0m
+[0;32mI (113363) TAG: ----------------------------------------[0m
+[0;32mI (113363) TAG:   Position: X=-566.9 cm  Y=350.6 cm[0m
+[0;32mI (113373) TAG: ========================================[0m
+[0;32mI (117373) TAG: ========================================[0m
+[0;32mI (117373) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (117373) TAG: ========================================[0m
+[0;32mI (117373) TAG:   TOF_ANCHOR_3    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (117383) TAG:   TOF_ANCHOR_1    RSSI: -63.8 dBm  Dist:  761.2 cm[0m
+[0;32mI (117383) TAG:   TOF_ANCHOR_0    RSSI: -62.6 dBm  Dist:  687.1 cm[0m
+[0;32mI (117393) TAG: ----------------------------------------[0m
+[0;32mI (117393) TAG:   Position: X=-28.7 cm  Y=358.0 cm[0m
+[0;32mI (117403) TAG: ========================================[0m
+[0;32mI (121403) TAG: ========================================[0m
+[0;32mI (121403) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (121403) TAG: ========================================[0m
+[0;32mI (121403) TAG:   TOF_ANCHOR_3    RSSI: -59.2 dBm  Dist:  514.2 cm[0m
+[0;32mI (121413) TAG:   TOF_ANCHOR_1    RSSI: -63.8 dBm  Dist:  761.2 cm[0m
+[0;32mI (121413) TAG:   TOF_ANCHOR_0    RSSI: -64.0 dBm  Dist:  774.3 cm[0m
+[0;32mI (121423) TAG: ----------------------------------------[0m
+[0;32mI (121423) TAG:   Position: X=183.5 cm  Y=708.5 cm[0m
+[0;32mI (121433) TAG: ========================================[0m
+[0;32mI (125433) TAG: ========================================[0m
+[0;32mI (125433) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (125433) TAG: ========================================[0m
+[0;32mI (125433) TAG:   TOF_ANCHOR_3    RSSI: -62.0 dBm  Dist:  652.9 cm[0m
+[0;32mI (125443) TAG:   TOF_ANCHOR_1    RSSI: -64.8 dBm  Dist:  828.9 cm[0m
+[0;32mI (125443) TAG:   TOF_ANCHOR_0    RSSI: -62.6 dBm  Dist:  687.1 cm[0m
+[0;32mI (125453) TAG: ----------------------------------------[0m
+[0;32mI (125453) TAG:   Position: X=-208.3 cm  Y=226.5 cm[0m
+[0;32mI (125463) TAG: ========================================[0m
+[0;32mI (129463) TAG: ========================================[0m
+[0;32mI (129463) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (129463) TAG: ========================================[0m
+[0;32mI (129463) TAG:   TOF_ANCHOR_3    RSSI: -62.4 dBm  Dist:  675.5 cm[0m
+[0;32mI (129473) TAG:   TOF_ANCHOR_1    RSSI: -63.6 dBm  Dist:  748.3 cm[0m
+[0;32mI (129473) TAG:   TOF_ANCHOR_0    RSSI: -63.2 dBm  Dist:  723.2 cm[0m
+[0;32mI (129483) TAG: ----------------------------------------[0m
+[0;32mI (129483) TAG:   Position: X=88.5 cm  Y=261.2 cm[0m
+[0;32mI (129493) TAG: ========================================[0m
+[0;32mI (133493) TAG: ========================================[0m
+[0;32mI (133493) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (133493) TAG: ========================================[0m
+[0;32mI (133493) TAG:   TOF_ANCHOR_3    RSSI: -63.6 dBm  Dist:  748.3 cm[0m
+[0;32mI (133503) TAG:   TOF_ANCHOR_1    RSSI: -60.6 dBm  Dist:  579.4 cm[0m
+[0;32mI (133503) TAG:   TOF_ANCHOR_0    RSSI: -52.2 dBm  Dist:  283.0 cm[0m
+[0;32mI (133513) TAG: ----------------------------------------[0m
+[0;32mI (133513) TAG:   Position: X=-275.9 cm  Y=-649.7 cm[0m
+[0;32mI (133523) TAG: ========================================[0m
+[0;32mI (137523) TAG: ========================================[0m
+[0;32mI (137523) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (137523) TAG: ========================================[0m
+[0;32mI (137523) TAG:   TOF_ANCHOR_3    RSSI: -55.4 dBm  Dist:  371.9 cm[0m
+[0;32mI (137533) TAG:   TOF_ANCHOR_1    RSSI: -60.2 dBm  Dist:  559.9 cm[0m
+[0;32mI (137533) TAG:   TOF_ANCHOR_0    RSSI: -54.0 dBm  Dist:  330.0 cm[0m
+[0;32mI (137543) TAG: ----------------------------------------[0m
+[0;32mI (137543) TAG:   Position: X=-191.1 cm  Y=101.0 cm[0m
+[0;32mI (137553) TAG: ========================================[0m
+[0;32mI (141553) TAG: ========================================[0m
+[0;32mI (141553) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (141553) TAG: ========================================[0m
+[0;32mI (141553) TAG:   TOF_ANCHOR_3    RSSI: -60.0 dBm  Dist:  550.5 cm[0m
+[0;32mI (141563) TAG:   TOF_ANCHOR_1    RSSI: -63.0 dBm  Dist:  711.0 cm[0m
+[0;32mI (141563) TAG:   TOF_ANCHOR_0    RSSI: -59.2 dBm  Dist:  514.2 cm[0m
+[0;32mI (141573) TAG: ----------------------------------------[0m
+[0;32mI (141573) TAG:   Position: X=-251.8 cm  Y=85.6 cm[0m
+[0;32mI (141583) TAG: ========================================[0m
+[0;32mI (145583) TAG: ========================================[0m
+[0;32mI (145583) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (145583) TAG: ========================================[0m
+[0;32mI (145583) TAG:   TOF_ANCHOR_3    RSSI: -60.2 dBm  Dist:  559.9 cm[0m
+[0;32mI (145593) TAG:   TOF_ANCHOR_1    RSSI: -64.8 dBm  Dist:  828.9 cm[0m
+[0;32mI (145593) TAG:   TOF_ANCHOR_0    RSSI: -52.6 dBm  Dist:  292.9 cm[0m
+[0;32mI (145603) TAG: ----------------------------------------[0m
+[0;32mI (145603) TAG:   Position: X=-852.3 cm  Y=-229.6 cm[0m
+[0;32mI (145613) TAG: ========================================[0m
+[0;32mI (149613) TAG: ========================================[0m
+[0;32mI (149613) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (149613) TAG: ========================================[0m
+[0;32mI (149613) TAG:   TOF_ANCHOR_3    RSSI: -53.8 dBm  Dist:  324.4 cm[0m
+[0;32mI (149623) TAG:   TOF_ANCHOR_1    RSSI: -62.8 dBm  Dist:  698.9 cm[0m
+[0;32mI (149623) TAG:   TOF_ANCHOR_0    RSSI: -53.6 dBm  Dist:  318.9 cm[0m
+[0;32mI (149633) TAG: ----------------------------------------[0m
+[0;32mI (149633) TAG:   Position: X=-494.7 cm  Y=144.1 cm[0m
+[0;32mI (149643) TAG: ========================================[0m
+[0;32mI (153643) TAG: ========================================[0m
+[0;32mI (153643) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (153643) TAG: ========================================[0m
+[0;32mI (153643) TAG:   TOF_ANCHOR_3    RSSI: -55.0 dBm  Dist:  359.4 cm[0m
+[0;32mI (153653) TAG:   TOF_ANCHOR_1    RSSI: -62.0 dBm  Dist:  652.9 cm[0m
+[0;32mI (153653) TAG:   TOF_ANCHOR_0    RSSI: -53.4 dBm  Dist:  313.5 cm[0m
+[0;32mI (153663) TAG: ----------------------------------------[0m
+[0;32mI (153663) TAG:   Position: X=-396.5 cm  Y=98.6 cm[0m
+[0;32mI (153673) TAG: ========================================[0m
+[0;32mI (157673) TAG: ========================================[0m
+[0;32mI (157673) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (157673) TAG: ========================================[0m
+[0;32mI (157673) TAG:   TOF_ANCHOR_3    RSSI: -54.8 dBm  Dist:  353.3 cm[0m
+[0;32mI (157683) TAG:   TOF_ANCHOR_1    RSSI: -65.4 dBm  Dist:  872.5 cm[0m
+[0;32mI (157683) TAG:   TOF_ANCHOR_0    RSSI: -55.2 dBm  Dist:  365.6 cm[0m
+[0;32mI (157693) TAG: ----------------------------------------[0m
+[0;32mI (157693) TAG:   Position: X=-895.9 cm  Y=164.7 cm[0m
+[0;32mI (157703) TAG: ========================================[0m
+[0;32mI (161703) TAG: ========================================[0m
+[0;32mI (161703) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (161703) TAG: ========================================[0m
+[0;32mI (161703) TAG:   TOF_ANCHOR_3    RSSI: -56.8 dBm  Dist:  419.0 cm[0m
+[0;32mI (161713) TAG:   TOF_ANCHOR_1    RSSI: -66.2 dBm  Dist:  934.1 cm[0m
+[0;32mI (161713) TAG:   TOF_ANCHOR_0    RSSI: -59.4 dBm  Dist:  523.0 cm[0m
+[0;32mI (161723) TAG: ----------------------------------------[0m
+[0;32mI (161723) TAG:   Position: X=-848.2 cm  Y=313.3 cm[0m
+[0;32mI (161733) TAG: ========================================[0m
+[0;32mI (165733) TAG: ========================================[0m
+[0;32mI (165733) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (165733) TAG: ========================================[0m
+[0;32mI (165733) TAG:   TOF_ANCHOR_3    RSSI: -57.2 dBm  Dist:  433.5 cm[0m
+[0;32mI (165743) TAG:   TOF_ANCHOR_1    RSSI: -66.2 dBm  Dist:  934.1 cm[0m
+[0;32mI (165743) TAG:   TOF_ANCHOR_0    RSSI: -57.8 dBm  Dist:  456.3 cm[0m
+[0;32mI (165753) TAG: ----------------------------------------[0m
+[0;32mI (165753) TAG:   Position: X=-957.1 cm  Y=183.8 cm[0m
+[0;32mI (165763) TAG: ========================================[0m
+[0;32mI (169763) TAG: ========================================[0m
+[0;32mI (169763) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (169763) TAG: ========================================[0m
+[0;32mI (169763) TAG:   TOF_ANCHOR_3    RSSI: -56.2 dBm  Dist:  398.1 cm[0m
+[0;32mI (169773) TAG:   TOF_ANCHOR_1    RSSI: -67.6 dBm  Dist: 1052.5 cm[0m
+[0;32mI (169773) TAG:   TOF_ANCHOR_0    RSSI: -60.6 dBm  Dist:  579.4 cm[0m
+[0;32mI (169783) TAG: ----------------------------------------[0m
+[0;32mI (169783) TAG:   Position: X=-1136.8 cm  Y=445.3 cm[0m
+[0;32mI (169793) TAG: ========================================[0m
+[0;32mI (173793) TAG: ========================================[0m
+[0;32mI (173793) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (173793) TAG: ========================================[0m
+[0;32mI (173793) TAG:   TOF_ANCHOR_3    RSSI: -56.8 dBm  Dist:  419.0 cm[0m
+[0;32mI (173803) TAG:   TOF_ANCHOR_1    RSSI: -65.6 dBm  Dist:  887.5 cm[0m
+[0;32mI (173803) TAG:   TOF_ANCHOR_0    RSSI: -61.4 dBm  Dist:  620.3 cm[0m
+[0;32mI (173813) TAG: ----------------------------------------[0m
+[0;32mI (173813) TAG:   Position: X=-521.4 cm  Y=498.6 cm[0m
+[0;32mI (173823) TAG: ========================================[0m
+[0;32mI (177823) TAG: ========================================[0m
+[0;32mI (177823) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (177823) TAG: ========================================[0m
+[0;32mI (177823) TAG:   TOF_ANCHOR_3    RSSI: -64.4 dBm  Dist:  801.1 cm[0m
+[0;32mI (177833) TAG:   TOF_ANCHOR_1    RSSI: -65.2 dBm  Dist:  857.7 cm[0m
+[0;32mI (177833) TAG:   TOF_ANCHOR_0    RSSI: -60.0 dBm  Dist:  550.5 cm[0m
+[0;32mI (177843) TAG: ----------------------------------------[0m
+[0;32mI (177843) TAG:   Position: X=-571.0 cm  Y=-414.6 cm[0m
+[0;32mI (177853) TAG: ========================================[0m
+[0;32mI (181853) TAG: ========================================[0m
+[0;32mI (181853) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (181853) TAG: ========================================[0m
+[0;32mI (181853) TAG:   TOF_ANCHOR_3    RSSI: -65.8 dBm  Dist:  902.7 cm[0m
+[0;32mI (181863) TAG:   TOF_ANCHOR_1    RSSI: -66.2 dBm  Dist:  934.1 cm[0m
+[0;32mI (181863) TAG:   TOF_ANCHOR_0    RSSI: -62.4 dBm  Dist:  675.5 cm[0m
+[0;32mI (181873) TAG: ----------------------------------------[0m
+[0;32mI (181873) TAG:   Position: X=-543.6 cm  Y=-447.7 cm[0m
+[0;32mI (181883) TAG: ========================================[0m
+[0;32mI (185883) TAG: ========================================[0m
+[0;32mI (185883) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (185883) TAG: ========================================[0m
+[0;32mI (185883) TAG:   TOF_ANCHOR_3    RSSI: -66.4 dBm  Dist:  950.1 cm[0m
+[0;32mI (185893) TAG:   TOF_ANCHOR_1    RSSI: -67.6 dBm  Dist: 1052.5 cm[0m
+[0;32mI (185893) TAG:   TOF_ANCHOR_0    RSSI: -61.8 dBm  Dist:  641.8 cm[0m
+[0;32mI (185903) TAG: ----------------------------------------[0m
+[0;32mI (185903) TAG:   Position: X=-1009.7 cm  Y=-668.0 cm[0m
+[0;32mI (185913) TAG: ========================================[0m
+[0;32mI (189913) TAG: ========================================[0m
+[0;32mI (189913) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (189913) TAG: ========================================[0m
+[0;32mI (189913) TAG:   TOF_ANCHOR_3    RSSI: -62.6 dBm  Dist:  687.1 cm[0m
+[0;32mI (189923) TAG:   TOF_ANCHOR_1    RSSI: -68.2 dBm  Dist: 1107.8 cm[0m
+[0;32mI (189923) TAG:   TOF_ANCHOR_0    RSSI: -61.8 dBm  Dist:  641.8 cm[0m
+[0;32mI (189933) TAG: ----------------------------------------[0m
+[0;32mI (189933) TAG:   Position: X=-1208.7 cm  Y=49.6 cm[0m
+[0;32mI (189943) TAG: ========================================[0m
+[0;32mI (193943) TAG: ========================================[0m
+[0;32mI (193943) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (193943) TAG: ========================================[0m
+[0;32mI (193943) TAG:   TOF_ANCHOR_3    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (193953) TAG:   TOF_ANCHOR_1    RSSI: -68.0 dBm  Dist: 1089.0 cm[0m
+[0;32mI (193953) TAG:   TOF_ANCHOR_0    RSSI: -64.2 dBm  Dist:  787.6 cm[0m
+[0;32mI (193963) TAG: ----------------------------------------[0m
+[0;32mI (193963) TAG:   Position: X=-792.8 cm  Y=604.9 cm[0m
+[0;32mI (193973) TAG: ========================================[0m
+[0;32mI (197973) TAG: ========================================[0m
+[0;32mI (197973) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (197973) TAG: ========================================[0m
+[0;32mI (197973) TAG:   TOF_ANCHOR_3    RSSI: -59.2 dBm  Dist:  514.2 cm[0m
+[0;32mI (197983) TAG:   TOF_ANCHOR_1    RSSI: -69.2 dBm  Dist: 1206.4 cm[0m
+[0;32mI (197983) TAG:   TOF_ANCHOR_0    RSSI: -63.0 dBm  Dist:  711.0 cm[0m
+[0;32mI (197993) TAG: ----------------------------------------[0m
+[0;32mI (197993) TAG:   Position: X=-1433.1 cm  Y=551.8 cm[0m
+[0;32mI (198003) TAG: ========================================[0m
+[0;32mI (202003) TAG: ========================================[0m
+[0;32mI (202003) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (202003) TAG: ========================================[0m
+[0;32mI (202003) TAG:   TOF_ANCHOR_3    RSSI: -61.0 dBm  Dist:  599.5 cm[0m
+[0;32mI (202013) TAG:   TOF_ANCHOR_1    RSSI: -67.2 dBm  Dist: 1017.2 cm[0m
+[0;32mI (202013) TAG:   TOF_ANCHOR_0    RSSI: -64.4 dBm  Dist:  801.1 cm[0m
+[0;32mI (202023) TAG: ----------------------------------------[0m
+[0;32mI (202023) TAG:   Position: X=-504.8 cm  Y=620.7 cm[0m
+[0;32mI (202033) TAG: ========================================[0m
+[0;32mI (206033) TAG: ========================================[0m
+[0;32mI (206033) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (206033) TAG: ========================================[0m
+[0;32mI (206033) TAG:   TOF_ANCHOR_3    RSSI: -57.6 dBm  Dist:  448.6 cm[0m
+[0;32mI (206043) TAG:   TOF_ANCHOR_1    RSSI: -68.4 dBm  Dist: 1126.8 cm[0m
+[0;32mI (206043) TAG:   TOF_ANCHOR_0    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (206053) TAG: ----------------------------------------[0m
+[0;32mI (206053) TAG:   Position: X=-1387.3 cm  Y=393.5 cm[0m
+[0;32mI (206063) TAG: ========================================[0m
+[0;32mI (210063) TAG: ========================================[0m
+[0;32mI (210063) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (210063) TAG: ========================================[0m
+[0;32mI (210063) TAG:   TOF_ANCHOR_3    RSSI: -56.8 dBm  Dist:  419.0 cm[0m
+[0;32mI (210073) TAG:   TOF_ANCHOR_1    RSSI: -67.2 dBm  Dist: 1017.2 cm[0m
+[0;32mI (210073) TAG:   TOF_ANCHOR_0    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (210083) TAG: ----------------------------------------[0m
+[0;32mI (210083) TAG:   Position: X=-995.6 cm  Y=436.3 cm[0m
+[0;32mI (210093) TAG: ========================================[0m
+[0;32mI (214093) TAG: ========================================[0m
+[0;32mI (214093) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (214093) TAG: ========================================[0m
+[0;32mI (214093) TAG:   TOF_ANCHOR_3    RSSI: -61.2 dBm  Dist:  609.8 cm[0m
+[0;32mI (214103) TAG:   TOF_ANCHOR_1    RSSI: -68.0 dBm  Dist: 1089.0 cm[0m
+[0;32mI (214103) TAG:   TOF_ANCHOR_0    RSSI: -60.6 dBm  Dist:  579.4 cm[0m
+[0;32mI (214113) TAG: ----------------------------------------[0m
+[0;32mI (214113) TAG:   Position: X=-1267.2 cm  Y=89.7 cm[0m
+[0;32mI (214123) TAG: ========================================[0m
+[0;32mI (218123) TAG: ========================================[0m
+[0;32mI (218123) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (218123) TAG: ========================================[0m
+[0;32mI (218123) TAG:   TOF_ANCHOR_3    RSSI: -57.6 dBm  Dist:  448.6 cm[0m
+[0;32mI (218133) TAG:   TOF_ANCHOR_1    RSSI: -66.4 dBm  Dist:  950.1 cm[0m
+[0;32mI (218133) TAG:   TOF_ANCHOR_0    RSSI: -60.8 dBm  Dist:  589.3 cm[0m
+[0;32mI (218143) TAG: ----------------------------------------[0m
+[0;32mI (218143) TAG:   Position: X=-775.7 cm  Y=393.5 cm[0m
+[0;32mI (218153) TAG: ========================================[0m
+[0;32mI (222153) TAG: ========================================[0m
+[0;32mI (222153) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (222153) TAG: ========================================[0m
+[0;32mI (222153) TAG:   TOF_ANCHOR_3    RSSI: -57.6 dBm  Dist:  448.6 cm[0m
+[0;32mI (222163) TAG:   TOF_ANCHOR_1    RSSI: -62.6 dBm  Dist:  687.1 cm[0m
+[0;32mI (222163) TAG:   TOF_ANCHOR_0    RSSI: -62.4 dBm  Dist:  675.5 cm[0m
+[0;32mI (222173) TAG: ----------------------------------------[0m
+[0;32mI (222173) TAG:   Position: X=123.6 cm  Y=575.1 cm[0m
+[0;32mI (222183) TAG: ========================================[0m
+[0;32mI (226183) TAG: ========================================[0m
+[0;32mI (226183) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (226183) TAG: ========================================[0m
+[0;32mI (226183) TAG:   TOF_ANCHOR_3    RSSI: -59.2 dBm  Dist:  514.2 cm[0m
+[0;32mI (226193) TAG:   TOF_ANCHOR_1    RSSI: -64.6 dBm  Dist:  814.9 cm[0m
+[0;32mI (226193) TAG:   TOF_ANCHOR_0    RSSI: -59.4 dBm  Dist:  523.0 cm[0m
+[0;32mI (226203) TAG: ----------------------------------------[0m
+[0;32mI (226203) TAG:   Position: X=-500.9 cm  Y=165.3 cm[0m
+[0;32mI (226213) TAG: ========================================[0m
+[0;32mI (230213) TAG: ========================================[0m
+[0;32mI (230213) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (230213) TAG: ========================================[0m
+[0;32mI (230213) TAG:   TOF_ANCHOR_3    RSSI: -61.4 dBm  Dist:  620.3 cm[0m
+[0;32mI (230223) TAG:   TOF_ANCHOR_1    RSSI: -67.4 dBm  Dist: 1034.7 cm[0m
+[0;32mI (230223) TAG:   TOF_ANCHOR_0    RSSI: -62.8 dBm  Dist:  698.9 cm[0m
+[0;32mI (230233) TAG: ----------------------------------------[0m
+[0;32mI (230233) TAG:   Position: X=-820.1 cm  Y=323.0 cm[0m
+[0;32mI (230243) TAG: ========================================[0m
+[0;32mI (234243) TAG: ========================================[0m
+[0;32mI (234243) TAG: RSSI Readings — Tag 3[0m
+[0;32mI (234243) TAG: ========================================[0m
+[0;32mI (234243) TAG:   TOF_ANCHOR_3    RSSI: -62.4 dBm  Dist:  675.5 cm[0m
+[0;32mI (234253) TAG:   TOF_ANCHOR_1    RSSI: -71.0 dBm  Dist: 1406.5 cm[0m
+[0;32mI (234253) TAG:   TOF_ANCHOR_0    RSSI: -59.8 dBm  Dist:  541.2 cm[0m
+[0;32mI (234263) TAG: ----------------------------------------[0m
+[0;32mI (234263) TAG:   Position: X=-2659.1 cm  Y=-122.4 cm[0m
+[0;32mI (234273) TAG: ========================================[0m

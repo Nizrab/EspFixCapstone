@@ -1,0 +1,27 @@
+Command: cmake -G Ninja -B C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag
+Configuration Report                                                           
++-----------------------------------------------------------------------------+
+|  Parser Version: 1                                                          |
+|  Verbosity: default                                                         |
+|  Defaults policy: sdkconfig                                                 |
+|  Status: Finished with notifications                                        |
+|                                                                             |
+| Disabled Symbols/Choices With User-Set Value                                |
+| +-------------------------------------------------------------------------+ |
+| | * IDF_TARGET (defined at C:/esp/v6.0/esp-idf/Kconfig:68) with user-set  | |
+| | value esp32s3 from                                                      | |
+| | C:\Users\barzi\AppData\Local\Temp\kconfgen_tmpw87t45gv                  | |
+| | * ESP_WIFI_ENABLED (defined at                                          | |
+| | C:/esp/v6.0/esp-idf/components/esp_wifi/Kconfig:4) with user-set value  | |
+| | y from C:\Users\barzi\AppData\Local\Temp\kconfgen_tmpw87t45gv           | |
+| | * ESP_WIFI_FTM_ENABLE (defined at                                       | |
+| | C:/esp/v6.0/esp-idf/components/esp_wifi/Kconfig:403) with user-set      | |
+| | value y from C:\Users\barzi\AppData\Local\Temp\kconfgen_tmpw87t45gv     | |
+| | * ESP_WIFI_FTM_INITIATOR_SUPPORT (defined at                            | |
+| | C:/esp/v6.0/esp-idf/components/esp_wifi/Kconfig:410) with user-set      | |
+| | value y from C:\Users\barzi\AppData\Local\Temp\kconfgen_tmpw87t45gv     | |
+| | * ESP_WIFI_FTM_RESPONDER_SUPPORT (defined at                            | |
+| | C:/esp/v6.0/esp-idf/components/esp_wifi/Kconfig:415) with user-set      | |
+| | value n from C:\Users\barzi\AppData\Local\Temp\kconfgen_tmpw87t45gv     | |
+| +-------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------+
