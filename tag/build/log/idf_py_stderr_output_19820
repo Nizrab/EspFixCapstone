@@ -1,8 +1,0 @@
-Command: C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\tof_tag.elf C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\bootloader\bootloader.elf --force-color -m 'C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM13'
-[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
-[0;33m--- Using \\.\COM13 instead...[0m
-[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM13 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/esp/v6.0/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
-[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/esp/v6.0/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
-[0m

@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.26200")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/tag/build/bootloader/toolchain/toolchain-esp32.cmake")
+include("C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/tag/build/bootloader/toolchain/toolchain-esp32s3.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

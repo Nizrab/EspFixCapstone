@@ -1,0 +1,16 @@
+Command: ninja all
+[1/7] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\anchor\build\bootloader && C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/7] No install step for 'bootloader'
+[3/7] Completed 'bootloader'
+[4/7] Generating esp-idf/esp_system/ld/sections.ld
+[5/7] Linking CXX executable tof_anchor.elf
+[6/7] Generating binary image from built executable
+esptool v5.2.0
+Creating ESP32-S3 image...
+Merged 2 ELF sections.
+Successfully created ESP32-S3 image.
+Generated C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/tof_anchor.bin
+[7/7] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\anchor\build && C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/partition_table/partition-table.bin C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/tof_anchor.bin"
+tof_anchor.bin binary size 0xba0a0 bytes. Smallest app partition is 0x100000 bytes. 0x45f60 bytes (27%) free.

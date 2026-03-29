@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "tof_anchor",
-    "project_version":    "1",
+    "project_version":    "9ddf9ea-dirty",
     "project_path":       "C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor",
     "idf_path":           "C:/esp/v6.0/esp-idf",
     "build_dir":          "C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build",

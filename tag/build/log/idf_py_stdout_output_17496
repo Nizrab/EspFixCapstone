@@ -1,0 +1,2369 @@
+Command: C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\tof_tag.elf C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\tag\build\bootloader\bootloader.elf --force-color -m 'C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM10'
+[0;32mI (110) esp_image: segment 1: paddr=000301f4 vaddr=3fc97700 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4209abd2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 28 2026 16:18:23[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.4[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=201cch (131532) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=000301f4 vaddr=3fc97700 size=05050h ( 20560) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=0003524c vaddr=40374000 size=0adcch ( 44492) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a29a8h (666024) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e29d0 vaddr=4037edcc size=0891ch ( 35100) load[0m
+[0;32mI (253) esp_image: segment 5: paddr=000eb2f4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (261) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (262) boot: Disabling RNG early entropy source...[0m
+[0;32mI (272) cpu_start: Multicore app[0m
+[0;32mI (280) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (281) cpu_start: Pro cpu start user code[0m
+[0;32mI (281) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (282) app_init: Application information:[0m
+[0;32mI (286) app_init: Project name:     tof_tag[0m
+[0;32mI (290) app_init: App version:      9ddf9ea-dirty[0m
+[0;32mI (295) app_init: Compile time:     Mar 28 2026 16:18:02[0m
+[0;32mI (300) app_init: ELF file SHA256:  b1a112f2c...[0m
+[0;32mI (304) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (308) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (311) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (315) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (319) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (326) heap_init: At 3FCA0C70 len 00048AA0 (290 KiB): RAM[0m
+[0;32mI (331) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (336) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (341) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (347) spi_flash: detected chip: generic[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;32mI (354) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (359) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (366) main_task: Started on CPU0[0m
+[0;32mI (376) main_task: Calling app_main()[0m
+[0;32mI (376) TAG: === FTM Tag 0 starting ===[0m
+[0;32mI (406) pp: pp rom version: e7ae62f[0m
+[0;32mI (406) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (416) wifi:wifi driver task: 3fced460, prio:23, stack:6656, core=0[0m
+[0;32mI (426) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (426) wifi:wifi certification version: v7.0[0m
+[0;32mI (426) wifi:config NVS flash: enabled[0m
+[0;32mI (426) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (436) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (436) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (446) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (456) wifi:Init static rx buffer num: 10[0m
+[0;32mI (456) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (466) wifi_init: accept mbox: 6[0m
+[0;32mI (466) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (476) wifi_init: tcp mbox: 6[0m
+[0;32mI (476) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (486) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (536) wifi:mode : sta (9c:13:9e:f4:00:e0) + softAP (9c:13:9e:f4:00:e1)[0m
+[0;32mI (546) wifi:enable tsf[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) TAG: Tag AP: SSID=TOF_TAG_0  IP=10.0.0.100[0m
+[0;32mI (556) TAG: STA started, connecting to EAP1250...[0m
+[0;32mI (556) wifi:ap channel adjust o:1,1 n:11,2[0m
+[0;32mI (566) wifi:new:<11,0>, old:<1,1>, ap:<11,2>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (576) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (576) TAG: Tag MAC: 9C:13:9E:F4:00:E1[0m
+[0;32mI (576) wifi:I (576) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 10.0.0.100[0m
+state: auth -> assoc (0x0)
+[0;32mI (596) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (596) wifi:connected with EAP1250, aid = 3, channel 11, BW20, bssid = 88:dc:96:6a:46:1e[0m
+[0;32mI (606) wifi:security: Open Auth, phy: bgn, rssi: -44[0m
+[0;32mI (606) wifi:pm start, type: 1[0m
+
+[0;32mI (606) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (616) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (676) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (676) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;33mW (30576) TAG: STA connection failed — will retry in background[0m
+[0;32mI (31576) main_task: Returned from app_main()[0m
+[0;32mI (34476) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (34476) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (34476) TAG: Total anchors found: 2[0m
+[0;32mI (34476) TAG: ========================================[0m
+[0;32mI (34486) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (34486) TAG: ========================================[0m
+[0;33mW (34496) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 52 mSec[0m
+[0;33mW (34496) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (34766) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 51.786 nSec, Avg RSSI: -62[0m
+[0;32mI (34766) TAG: FTM OK — RTT: 51786 ps  entries: 14[0m
+[0;32mI (34776) TAG:   TOF_ANCHOR_62 → RTT: 51786 ps  Dist: 776.8 cm[0m
+[0;33mW (34976) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (34976) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (35236) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.875 nSec, Avg RSSI: -64[0m
+[0;32mI (35236) TAG: FTM OK — RTT: 71875 ps  entries: 14[0m
+[0;32mI (35246) TAG:   TOF_ANCHOR_61 → RTT: 71875 ps  Dist: 1078.1 cm[0m
+[0;32mI (35446) TAG: Position: X=174.3 cm  Y=0.0 cm[0m
+[1;31mE (40466) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (40466) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (40466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (40466) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (45376) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (45376) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (45376) TAG: Total anchors found: 2[0m
+[0;32mI (45386) TAG: ========================================[0m
+[0;32mI (45386) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (45386) TAG: ========================================[0m
+[0;33mW (45396) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (45406) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (45686) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 45.424 nSec, Avg RSSI: -61[0m
+[0;32mI (45686) TAG: FTM OK — RTT: 45424 ps  entries: 14[0m
+[0;32mI (45696) TAG:   TOF_ANCHOR_61 → RTT: 45424 ps  Dist: 681.4 cm[0m
+[0;33mW (45896) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 13 mSec[0m
+[0;33mW (45896) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (46136) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 50.335 nSec, Avg RSSI: -64[0m
+[0;32mI (46136) TAG: FTM OK — RTT: 50335 ps  entries: 14[0m
+[0;32mI (46136) TAG:   TOF_ANCHOR_62 → RTT: 50335 ps  Dist: 755.0 cm[0m
+[0;32mI (46346) TAG: Position: X=142.3 cm  Y=0.0 cm[0m
+[1;31mE (51366) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (51366) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (51366) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (51366) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (56276) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (56276) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (56276) TAG: Total anchors found: 2[0m
+[0;32mI (56286) TAG: ========================================[0m
+[0;32mI (56286) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (56286) TAG: ========================================[0m
+[0;33mW (56296) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 20 mSec[0m
+[0;33mW (56306) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (56546) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 68.990 nSec, Avg RSSI: -64[0m
+[0;32mI (56546) TAG: FTM OK — RTT: 68990 ps  entries: 13[0m
+[0;32mI (56546) TAG:   TOF_ANCHOR_61 → RTT: 68990 ps  Dist: 1034.8 cm[0m
+[0;33mW (56756) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (56756) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (56986) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 58.817 nSec, Avg RSSI: -64[0m
+[0;32mI (56986) TAG: FTM OK — RTT: 58817 ps  entries: 14[0m
+[0;32mI (56986) TAG:   TOF_ANCHOR_62 → RTT: 58817 ps  Dist: 882.3 cm[0m
+[0;32mI (57196) TAG: Position: X=161.9 cm  Y=0.0 cm[0m
+[1;31mE (62216) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (62216) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (62216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (62216) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (67126) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (67126) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (67126) TAG: Total anchors found: 2[0m
+[0;32mI (67136) TAG: ========================================[0m
+[0;32mI (67136) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (67136) TAG: ========================================[0m
+[0;33mW (67146) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 61 mSec[0m
+[0;33mW (67156) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (67436) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.317 nSec, Avg RSSI: -66[0m
+[0;32mI (67436) TAG: FTM OK — RTT: 71317 ps  entries: 14[0m
+[0;32mI (67436) TAG:   TOF_ANCHOR_62 → RTT: 71317 ps  Dist: 1069.8 cm[0m
+[0;33mW (67646) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 36 mSec[0m
+[0;33mW (67646) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (67906) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 75.670 nSec, Avg RSSI: -64[0m
+[0;32mI (67906) TAG: FTM OK — RTT: 75670 ps  entries: 14[0m
+[0;32mI (67906) TAG:   TOF_ANCHOR_61 → RTT: 75670 ps  Dist: 1135.0 cm[0m
+[0;32mI (68116) TAG: Position: X=154.4 cm  Y=0.0 cm[0m
+[1;31mE (73136) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (73136) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (73136) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (73136) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (78046) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (78046) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (78046) TAG: Total anchors found: 2[0m
+[0;32mI (78056) TAG: ========================================[0m
+[0;32mI (78056) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (78056) TAG: ========================================[0m
+[0;33mW (78066) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 61 mSec[0m
+[0;33mW (78076) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (78356) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 72.880 nSec, Avg RSSI: -62[0m
+[0;32mI (78356) TAG: FTM OK — RTT: 72880 ps  entries: 14[0m
+[0;32mI (78356) TAG:   TOF_ANCHOR_61 → RTT: 72880 ps  Dist: 1093.2 cm[0m
+[0;33mW (78566) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 8 mSec[0m
+[0;33mW (78566) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (78796) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 60.491 nSec, Avg RSSI: -64[0m
+[0;32mI (78796) TAG: FTM OK — RTT: 60491 ps  entries: 14[0m
+[0;32mI (78806) TAG:   TOF_ANCHOR_62 → RTT: 60491 ps  Dist: 907.4 cm[0m
+[0;32mI (79006) TAG: Position: X=163.9 cm  Y=0.0 cm[0m
+[1;31mE (84026) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (84026) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (84026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (84026) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (88936) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (88936) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (88936) TAG: Total anchors found: 2[0m
+[0;32mI (88946) TAG: ========================================[0m
+[0;32mI (88946) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (88946) TAG: ========================================[0m
+[0;33mW (90456) TAG: FTM failed — status: 3[0m
+[0;33mW (90656) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 104 mSec[0m
+[0;33mW (90656) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (90986) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 47.322 nSec, Avg RSSI: -69[0m
+[0;32mI (90986) TAG: FTM OK — RTT: 47322 ps  entries: 14[0m
+[0;32mI (90986) TAG:   TOF_ANCHOR_62 → RTT: 47322 ps  Dist: 709.8 cm[0m
+[0;33mW (91196) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (96096) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (96096) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (96096) TAG: Total anchors found: 2[0m
+[0;32mI (96106) TAG: ========================================[0m
+[0;32mI (96106) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (96106) TAG: ========================================[0m
+[0;33mW (97616) TAG: FTM failed — status: 3[0m
+[0;33mW (97816) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 10 mSec[0m
+[0;33mW (97816) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (98046) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 67.634 nSec, Avg RSSI: -59[0m
+[0;32mI (98046) TAG: FTM OK — RTT: 67634 ps  entries: 14[0m
+[0;32mI (98056) TAG:   TOF_ANCHOR_62 → RTT: 67634 ps  Dist: 1014.5 cm[0m
+[0;33mW (98256) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (103156) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (103156) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (103156) TAG: Total anchors found: 2[0m
+[0;32mI (103166) TAG: ========================================[0m
+[0;32mI (103166) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (103176) TAG: ========================================[0m
+[0;33mW (103176) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 74 mSec[0m
+[0;33mW (103186) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (103476) wifi:FTM session ends with 9 valid readings out of 9 readings received, Avg raw RTT: 139.583 nSec, Avg RSSI: -89[0m
+[0;32mI (103476) TAG: FTM OK — RTT: 139583 ps  entries: 9[0m
+[0;32mI (103486) TAG:   TOF_ANCHOR_62 → RTT: 139583 ps  Dist: 2093.7 cm[0m
+[0;33mW (105186) TAG: FTM failed — status: 3[0m
+[0;33mW (105386) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (110286) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (110286) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (110286) TAG: Total anchors found: 2[0m
+[0;32mI (110296) TAG: ========================================[0m
+[0;32mI (110296) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (110296) TAG: ========================================[0m
+[0;33mW (110306) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 13 mSec[0m
+[0;33mW (110316) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (110546) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 109.495 nSec, Avg RSSI: -70[0m
+[0;32mI (110546) TAG: FTM OK — RTT: 109495 ps  entries: 13[0m
+[0;32mI (110546) TAG:   TOF_ANCHOR_62 → RTT: 109495 ps  Dist: 1642.4 cm[0m
+[0;33mW (110756) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 36 mSec[0m
+[0;33mW (110756) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (111026) wifi:FTM session ends with 8 valid readings out of 8 readings received, Avg raw RTT: 59.766 nSec, Avg RSSI: -58[0m
+[0;32mI (111026) TAG: FTM OK — RTT: 59766 ps  entries: 8[0m
+[0;32mI (111026) TAG:   TOF_ANCHOR_61 → RTT: 59766 ps  Dist: 896.5 cm[0m
+[0;32mI (111236) TAG: Position: X=106.0 cm  Y=0.0 cm[0m
+[1;31mE (116256) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (116256) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (116256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (116256) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (121166) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (121166) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (121166) TAG: Total anchors found: 2[0m
+[0;32mI (121176) TAG: ========================================[0m
+[0;32mI (121176) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (121186) TAG: ========================================[0m
+[0;33mW (121186) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 89 mSec[0m
+[0;33mW (121196) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (121506) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 104.207 nSec, Avg RSSI: -70[0m
+[0;32mI (121506) TAG: FTM OK — RTT: 104207 ps  entries: 13[0m
+[0;32mI (121506) TAG:   TOF_ANCHOR_62 → RTT: 104207 ps  Dist: 1563.1 cm[0m
+[0;33mW (121716) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 30 mSec[0m
+[0;33mW (121726) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (121976) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 66.466 nSec, Avg RSSI: -61[0m
+[0;32mI (121976) TAG: FTM OK — RTT: 66466 ps  entries: 13[0m
+[0;32mI (121976) TAG:   TOF_ANCHOR_61 → RTT: 66466 ps  Dist: 997.0 cm[0m
+[0;32mI (122186) TAG: Position: X=116.9 cm  Y=0.0 cm[0m
+[1;31mE (122186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (122186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (122196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (122196) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (127096) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (127096) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (127096) TAG: Total anchors found: 2[0m
+[0;32mI (127106) TAG: ========================================[0m
+[0;32mI (127106) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (127116) TAG: ========================================[0m
+[0;33mW (127116) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 60 mSec[0m
+[0;33mW (127126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (127406) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 60.216 nSec, Avg RSSI: -61[0m
+[0;32mI (127406) TAG: FTM OK — RTT: 60216 ps  entries: 13[0m
+[0;32mI (127406) TAG:   TOF_ANCHOR_61 → RTT: 60216 ps  Dist: 903.2 cm[0m
+[0;33mW (127626) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 100 mSec[0m
+[0;33mW (127626) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (127946) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 103.606 nSec, Avg RSSI: -69[0m
+[0;32mI (127956) TAG: FTM OK — RTT: 103606 ps  entries: 13[0m
+[0;32mI (127956) TAG:   TOF_ANCHOR_62 → RTT: 103606 ps  Dist: 1554.1 cm[0m
+[0;32mI (128166) TAG: Position: X=110.3 cm  Y=0.0 cm[0m
+[1;31mE (128166) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (128166) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (128176) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (128176) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (133076) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (133076) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (133076) TAG: Total anchors found: 2[0m
+[0;32mI (133086) TAG: ========================================[0m
+[0;32mI (133086) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (133096) TAG: ========================================[0m
+[0;33mW (133096) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 20 mSec[0m
+[0;33mW (133106) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (133346) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 52.790 nSec, Avg RSSI: -61[0m
+[0;32mI (133346) TAG: FTM OK — RTT: 52790 ps  entries: 14[0m
+[0;32mI (133346) TAG:   TOF_ANCHOR_61 → RTT: 52790 ps  Dist: 791.8 cm[0m
+[0;33mW (133556) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (133556) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (133786) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 89.784 nSec, Avg RSSI: -71[0m
+[0;32mI (133786) TAG: FTM OK — RTT: 89784 ps  entries: 13[0m
+[0;32mI (133786) TAG:   TOF_ANCHOR_62 → RTT: 89784 ps  Dist: 1346.8 cm[0m
+[0;32mI (133996) TAG: Position: X=111.1 cm  Y=0.0 cm[0m
+[1;31mE (133996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (133996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (134006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (134006) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (138906) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (138906) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (138906) TAG: Total anchors found: 2[0m
+[0;32mI (138916) TAG: ========================================[0m
+[0;32mI (138916) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (138926) TAG: ========================================[0m
+[0;33mW (138926) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 26 mSec[0m
+[0;33mW (138936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (139176) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 55.469 nSec, Avg RSSI: -60[0m
+[0;32mI (139176) TAG: FTM OK — RTT: 55469 ps  entries: 14[0m
+[0;32mI (139186) TAG:   TOF_ANCHOR_61 → RTT: 55469 ps  Dist: 832.0 cm[0m
+[0;33mW (139386) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 14 mSec[0m
+[0;33mW (139386) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (139626) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 97.768 nSec, Avg RSSI: -69[0m
+[0;32mI (139626) TAG: FTM OK — RTT: 97768 ps  entries: 14[0m
+[0;32mI (139626) TAG:   TOF_ANCHOR_62 → RTT: 97768 ps  Dist: 1466.5 cm[0m
+[0;32mI (139836) TAG: Position: X=108.6 cm  Y=0.0 cm[0m
+[1;31mE (139836) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (139836) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (139846) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (139846) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (144746) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (144746) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (144746) TAG: Total anchors found: 2[0m
+[0;32mI (144756) TAG: ========================================[0m
+[0;32mI (144756) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (144766) TAG: ========================================[0m
+[0;33mW (144766) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 22 mSec[0m
+[0;33mW (144776) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (145016) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 50.721 nSec, Avg RSSI: -64[0m
+[0;32mI (145016) TAG: FTM OK — RTT: 50721 ps  entries: 13[0m
+[0;32mI (145016) TAG:   TOF_ANCHOR_61 → RTT: 50721 ps  Dist: 760.8 cm[0m
+[0;33mW (145226) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (145226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (145456) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 103.348 nSec, Avg RSSI: -71[0m
+[0;32mI (145456) TAG: FTM OK — RTT: 103348 ps  entries: 14[0m
+[0;32mI (145466) TAG:   TOF_ANCHOR_62 → RTT: 103348 ps  Dist: 1550.2 cm[0m
+[0;32mI (145676) TAG: Position: X=98.8 cm  Y=0.0 cm[0m
+[1;31mE (145676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (145676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (145686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (145686) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (150586) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (150586) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (150586) TAG: Total anchors found: 2[0m
+[0;32mI (150596) TAG: ========================================[0m
+[0;32mI (150596) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (150606) TAG: ========================================[0m
+[0;33mW (150606) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 17 mSec[0m
+[0;33mW (150616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (150846) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 48.438 nSec, Avg RSSI: -64[0m
+[0;32mI (150846) TAG: FTM OK — RTT: 48438 ps  entries: 13[0m
+[0;32mI (150856) TAG:   TOF_ANCHOR_61 → RTT: 48438 ps  Dist: 726.6 cm[0m
+[0;33mW (151056) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 18 mSec[0m
+[0;33mW (151066) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (151296) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 119.420 nSec, Avg RSSI: -72[0m
+[0;32mI (151296) TAG: FTM OK — RTT: 119420 ps  entries: 14[0m
+[0;32mI (151306) TAG:   TOF_ANCHOR_62 → RTT: 119420 ps  Dist: 1791.3 cm[0m
+[0;32mI (151506) TAG: Position: X=86.6 cm  Y=0.0 cm[0m
+[1;31mE (151506) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (151506) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (151516) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (151516) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (156416) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (156416) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (156416) TAG: Total anchors found: 2[0m
+[0;32mI (156426) TAG: ========================================[0m
+[0;32mI (156426) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (156436) TAG: ========================================[0m
+[0;33mW (156446) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 23 mSec[0m
+[0;33mW (156446) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (156686) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 49.399 nSec, Avg RSSI: -64[0m
+[0;32mI (156686) TAG: FTM OK — RTT: 49399 ps  entries: 13[0m
+[0;32mI (156696) TAG:   TOF_ANCHOR_61 → RTT: 49399 ps  Dist: 741.0 cm[0m
+[0;33mW (156896) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (156896) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (157136) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 111.830 nSec, Avg RSSI: -70[0m
+[0;32mI (157136) TAG: FTM OK — RTT: 111830 ps  entries: 14[0m
+[0;32mI (157136) TAG:   TOF_ANCHOR_62 → RTT: 111830 ps  Dist: 1677.4 cm[0m
+[0;32mI (157346) TAG: Position: X=92.0 cm  Y=0.0 cm[0m
+[1;31mE (157346) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (157346) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (157356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (157356) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (162256) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (162256) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (162256) TAG: Total anchors found: 2[0m
+[0;32mI (162266) TAG: ========================================[0m
+[0;32mI (162266) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (162276) TAG: ========================================[0m
+[0;33mW (162276) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 24 mSec[0m
+[0;33mW (162286) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (162526) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 65.290 nSec, Avg RSSI: -64[0m
+[0;32mI (162526) TAG: FTM OK — RTT: 65290 ps  entries: 14[0m
+[0;32mI (162536) TAG:   TOF_ANCHOR_61 → RTT: 65290 ps  Dist: 979.3 cm[0m
+[0;33mW (162736) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (162736) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (162976) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 106.808 nSec, Avg RSSI: -72[0m
+[0;32mI (162976) TAG: FTM OK — RTT: 106808 ps  entries: 14[0m
+[0;32mI (162976) TAG:   TOF_ANCHOR_62 → RTT: 106808 ps  Dist: 1602.1 cm[0m
+[0;32mI (163186) TAG: Position: X=113.8 cm  Y=0.0 cm[0m
+[1;31mE (163186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (163186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (163196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (163196) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (168096) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (168096) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (168096) TAG: Total anchors found: 2[0m
+[0;32mI (168106) TAG: ========================================[0m
+[0;32mI (168106) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (168116) TAG: ========================================[0m
+[0;33mW (168116) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 20 mSec[0m
+[0;33mW (168126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (168366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.384 nSec, Avg RSSI: -66[0m
+[0;32mI (168366) TAG: FTM OK — RTT: 61384 ps  entries: 14[0m
+[0;32mI (168366) TAG:   TOF_ANCHOR_61 → RTT: 61384 ps  Dist: 920.8 cm[0m
+[0;33mW (168576) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 8 mSec[0m
+[0;33mW (168576) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (168806) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 69.866 nSec, Avg RSSI: -64[0m
+[0;32mI (168806) TAG: FTM OK — RTT: 69866 ps  entries: 14[0m
+[0;32mI (168816) TAG:   TOF_ANCHOR_62 → RTT: 69866 ps  Dist: 1048.0 cm[0m
+[0;32mI (169016) TAG: Position: X=140.3 cm  Y=0.0 cm[0m
+[1;31mE (169016) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (169016) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (169026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (169026) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (173926) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (173926) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (173926) TAG: Total anchors found: 2[0m
+[0;32mI (173936) TAG: ========================================[0m
+[0;32mI (173936) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (173946) TAG: ========================================[0m
+[0;33mW (173946) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 65 mSec[0m
+[0;33mW (173956) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (174236) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.254 nSec, Avg RSSI: -64[0m
+[0;32mI (174236) TAG: FTM OK — RTT: 82254 ps  entries: 14[0m
+[0;32mI (174246) TAG:   TOF_ANCHOR_62 → RTT: 82254 ps  Dist: 1233.8 cm[0m
+[0;33mW (174446) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (174446) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (174706) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 85.491 nSec, Avg RSSI: -68[0m
+[0;32mI (174706) TAG: FTM OK — RTT: 85491 ps  entries: 14[0m
+[0;32mI (174716) TAG:   TOF_ANCHOR_61 → RTT: 85491 ps  Dist: 1282.4 cm[0m
+[0;32mI (174916) TAG: Position: X=152.9 cm  Y=0.0 cm[0m
+[1;31mE (174916) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (174916) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (174926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (174926) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (179826) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (179826) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (179826) TAG: Total anchors found: 2[0m
+[0;32mI (179836) TAG: ========================================[0m
+[0;32mI (179836) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (179846) TAG: ========================================[0m
+[0;33mW (179846) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 104 mSec[0m
+[0;33mW (179856) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (180176) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 79.353 nSec, Avg RSSI: -68[0m
+[0;32mI (180176) TAG: FTM OK — RTT: 79353 ps  entries: 14[0m
+[0;32mI (180186) TAG:   TOF_ANCHOR_62 → RTT: 79353 ps  Dist: 1190.3 cm[0m
+[0;33mW (180386) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (180386) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (180646) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 89.543 nSec, Avg RSSI: -70[0m
+[0;32mI (180646) TAG: FTM OK — RTT: 89543 ps  entries: 13[0m
+[0;32mI (180656) TAG:   TOF_ANCHOR_61 → RTT: 89543 ps  Dist: 1343.1 cm[0m
+[0;32mI (180856) TAG: Position: X=159.0 cm  Y=0.0 cm[0m
+[1;31mE (180856) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (180856) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (180866) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (180866) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (185766) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (185766) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (185766) TAG: Total anchors found: 2[0m
+[0;32mI (185776) TAG: ========================================[0m
+[0;32mI (185776) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (185786) TAG: ========================================[0m
+[0;33mW (185786) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 104 mSec[0m
+[0;33mW (185796) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (186116) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 87.54 nSec, Avg RSSI: -69[0m
+[0;32mI (186116) TAG: FTM OK — RTT: 87054 ps  entries: 14[0m
+[0;32mI (186126) TAG:   TOF_ANCHOR_62 → RTT: 87054 ps  Dist: 1305.8 cm[0m
+[0;33mW (186326) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 37 mSec[0m
+[0;33mW (186326) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (186586) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 87.620 nSec, Avg RSSI: -68[0m
+[0;32mI (186586) TAG: FTM OK — RTT: 87620 ps  entries: 13[0m
+[0;32mI (186596) TAG:   TOF_ANCHOR_61 → RTT: 87620 ps  Dist: 1314.3 cm[0m
+[0;32mI (186796) TAG: Position: X=150.5 cm  Y=0.0 cm[0m
+[1;31mE (186796) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (186796) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (186806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (186806) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (191706) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (191706) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (191706) TAG: Total anchors found: 2[0m
+[0;32mI (191716) TAG: ========================================[0m
+[0;32mI (191716) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (191726) TAG: ========================================[0m
+[0;33mW (191736) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 54 mSec[0m
+[0;33mW (191746) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (192016) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 77.284 nSec, Avg RSSI: -69[0m
+[0;32mI (192016) TAG: FTM OK — RTT: 77284 ps  entries: 13[0m
+[0;32mI (192026) TAG:   TOF_ANCHOR_61 → RTT: 77284 ps  Dist: 1159.3 cm[0m
+[0;33mW (192226) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (192236) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (192466) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 88.839 nSec, Avg RSSI: -68[0m
+[0;32mI (192466) TAG: FTM OK — RTT: 88839 ps  entries: 14[0m
+[0;32mI (192466) TAG:   TOF_ANCHOR_62 → RTT: 88839 ps  Dist: 1332.6 cm[0m
+[0;32mI (192676) TAG: Position: X=139.6 cm  Y=0.0 cm[0m
+[1;31mE (192676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (192676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (192686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (192686) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (197586) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (197586) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (197586) TAG: Total anchors found: 2[0m
+[0;32mI (197596) TAG: ========================================[0m
+[0;32mI (197596) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (197606) TAG: ========================================[0m
+[0;33mW (197606) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 60 mSec[0m
+[0;33mW (197616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (197896) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 96.94 nSec, Avg RSSI: -68[0m
+[0;32mI (197896) TAG: FTM OK — RTT: 96094 ps  entries: 14[0m
+[0;32mI (197896) TAG:   TOF_ANCHOR_62 → RTT: 96094 ps  Dist: 1441.4 cm[0m
+[0;33mW (198106) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 33 mSec[0m
+[0;33mW (198106) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (198366) wifi:FTM session ends with 11 valid readings out of 11 readings received, Avg raw RTT: 117.46 nSec, Avg RSSI: -71[0m
+[0;32mI (198366) TAG: FTM OK — RTT: 117046 ps  entries: 11[0m
+[0;32mI (198366) TAG:   TOF_ANCHOR_61 → RTT: 117046 ps  Dist: 1755.7 cm[0m
+[0;32mI (198576) TAG: Position: X=164.7 cm  Y=0.0 cm[0m
+[1;31mE (198576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (198576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (198586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (198586) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (203486) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (203486) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (203486) TAG: Total anchors found: 2[0m
+[0;32mI (203496) TAG: ========================================[0m
+[0;32mI (203496) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (203506) TAG: ========================================[0m
+[0;33mW (203516) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 99 mSec[0m
+[0;33mW (203516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (203836) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 87.54 nSec, Avg RSSI: -67[0m
+[0;32mI (203836) TAG: FTM OK — RTT: 87054 ps  entries: 14[0m
+[0;32mI (203836) TAG:   TOF_ANCHOR_62 → RTT: 87054 ps  Dist: 1305.8 cm[0m
+[0;33mW (204046) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 31 mSec[0m
+[0;33mW (204056) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (204306) wifi:FTM session ends with 2 valid readings out of 2 readings received, Avg raw RTT: 136.719 nSec, Avg RSSI: -74[0m
+[0;32mI (204306) TAG: FTM OK — RTT: 136719 ps  entries: 2[0m
+[0;32mI (204306) TAG:   TOF_ANCHOR_61 → RTT: 136719 ps  Dist: 2050.8 cm[0m
+[0;32mI (204516) TAG: Position: X=183.3 cm  Y=0.0 cm[0m
+[1;31mE (204516) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (204516) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (204526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (204526) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (209426) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (209426) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (209426) TAG: Total anchors found: 2[0m
+[0;32mI (209436) TAG: ========================================[0m
+[0;32mI (209436) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (209446) TAG: ========================================[0m
+[0;33mW (209446) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 98 mSec[0m
+[0;33mW (209456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (209766) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 85.603 nSec, Avg RSSI: -66[0m
+[0;32mI (209776) TAG: FTM OK — RTT: 85603 ps  entries: 14[0m
+[0;32mI (209776) TAG:   TOF_ANCHOR_62 → RTT: 85603 ps  Dist: 1284.0 cm[0m
+[0;33mW (209986) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 30 mSec[0m
+[0;33mW (209986) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (210246) wifi:FTM session ends with 5 valid readings out of 5 readings received, Avg raw RTT: 134.375 nSec, Avg RSSI: -73[0m
+[0;32mI (210246) TAG: FTM OK — RTT: 134375 ps  entries: 5[0m
+[0;32mI (210246) TAG:   TOF_ANCHOR_61 → RTT: 134375 ps  Dist: 2015.6 cm[0m
+[0;32mI (210456) TAG: Position: X=183.2 cm  Y=0.0 cm[0m
+[1;31mE (210456) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (210456) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (210466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (210466) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (215366) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (215366) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (215366) TAG: Total anchors found: 2[0m
+[0;32mI (215376) TAG: ========================================[0m
+[0;32mI (215376) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (215386) TAG: ========================================[0m
+[0;33mW (215386) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 59 mSec[0m
+[0;33mW (215396) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (215676) wifi:FTM session ends with 12 valid readings out of 12 readings received, Avg raw RTT: 120.573 nSec, Avg RSSI: -70[0m
+[0;32mI (215676) TAG: FTM OK — RTT: 120573 ps  entries: 12[0m
+[0;32mI (215676) TAG:   TOF_ANCHOR_61 → RTT: 120573 ps  Dist: 1808.6 cm[0m
+[0;33mW (215886) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 6 mSec[0m
+[0;33mW (215886) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (216116) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 83.929 nSec, Avg RSSI: -66[0m
+[0;32mI (216116) TAG: FTM OK — RTT: 83929 ps  entries: 14[0m
+[0;32mI (216116) TAG:   TOF_ANCHOR_62 → RTT: 83929 ps  Dist: 1258.9 cm[0m
+[0;32mI (216326) TAG: Position: X=176.9 cm  Y=0.0 cm[0m
+[1;31mE (216326) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (216326) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (216336) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (216336) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (221236) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (221236) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (221236) TAG: Total anchors found: 2[0m
+[0;32mI (221246) TAG: ========================================[0m
+[0;32mI (221246) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (221256) TAG: ========================================[0m
+[0;33mW (221256) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 64 mSec[0m
+[0;33mW (221266) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (221546) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 92.188 nSec, Avg RSSI: -67[0m
+[0;32mI (221546) TAG: FTM OK — RTT: 92188 ps  entries: 14[0m
+[0;32mI (221556) TAG:   TOF_ANCHOR_62 → RTT: 92188 ps  Dist: 1382.8 cm[0m
+[0;33mW (221756) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (221756) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (222016) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 107.701 nSec, Avg RSSI: -69[0m
+[0;32mI (222016) TAG: FTM OK — RTT: 107701 ps  entries: 14[0m
+[0;32mI (222026) TAG:   TOF_ANCHOR_61 → RTT: 107701 ps  Dist: 1615.5 cm[0m
+[0;32mI (222226) TAG: Position: X=161.6 cm  Y=0.0 cm[0m
+[1;31mE (222226) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (222226) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (222236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (222236) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (227136) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (227136) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (227136) TAG: Total anchors found: 2[0m
+[0;32mI (227146) TAG: ========================================[0m
+[0;32mI (227146) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (227156) TAG: ========================================[0m
+[0;33mW (227156) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 103 mSec[0m
+[0;33mW (227166) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (227486) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 89.174 nSec, Avg RSSI: -65[0m
+[0;32mI (227486) TAG: FTM OK — RTT: 89174 ps  entries: 14[0m
+[0;32mI (227486) TAG:   TOF_ANCHOR_62 → RTT: 89174 ps  Dist: 1337.6 cm[0m
+[0;33mW (227696) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 37 mSec[0m
+[0;33mW (227696) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (227956) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 117.746 nSec, Avg RSSI: -72[0m
+[0;32mI (227956) TAG: FTM OK — RTT: 117746 ps  entries: 14[0m
+[0;32mI (227966) TAG:   TOF_ANCHOR_61 → RTT: 117746 ps  Dist: 1766.2 cm[0m
+[0;32mI (228166) TAG: Position: X=170.7 cm  Y=0.0 cm[0m
+[1;31mE (228166) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (228166) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (228176) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (228176) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (233076) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (233076) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (233076) TAG: Total anchors found: 2[0m
+[0;32mI (233086) TAG: ========================================[0m
+[0;32mI (233086) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (233086) TAG: ========================================[0m
+[0;33mW (233096) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 64 mSec[0m
+[0;33mW (233106) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (233386) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.366 nSec, Avg RSSI: -68[0m
+[0;32mI (233386) TAG: FTM OK — RTT: 82366 ps  entries: 14[0m
+[0;32mI (233396) TAG:   TOF_ANCHOR_61 → RTT: 82366 ps  Dist: 1235.5 cm[0m
+[0;33mW (233596) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (233596) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (233836) wifi:FTM session ends with 11 valid readings out of 11 readings received, Avg raw RTT: 91.762 nSec, Avg RSSI: -74[0m
+[0;32mI (233836) TAG: FTM OK — RTT: 91762 ps  entries: 11[0m
+[0;32mI (233836) TAG:   TOF_ANCHOR_62 → RTT: 91762 ps  Dist: 1376.4 cm[0m
+[0;32mI (234046) TAG: Position: X=141.9 cm  Y=0.0 cm[0m
+[1;31mE (234046) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (234046) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (234056) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (234056) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (238956) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (238956) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (238956) TAG: Total anchors found: 2[0m
+[0;32mI (238966) TAG: ========================================[0m
+[0;32mI (238966) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (238976) TAG: ========================================[0m
+[0;33mW (238976) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 21 mSec[0m
+[0;33mW (238986) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (239226) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 77.9 nSec, Avg RSSI: -67[0m
+[0;32mI (239226) TAG: FTM OK — RTT: 77009 ps  entries: 14[0m
+[0;32mI (239226) TAG:   TOF_ANCHOR_61 → RTT: 77009 ps  Dist: 1155.1 cm[0m
+[0;33mW (239436) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (239436) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (239666) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 96.986 nSec, Avg RSSI: -72[0m
+[0;32mI (239666) TAG: FTM OK — RTT: 96986 ps  entries: 14[0m
+[0;32mI (239676) TAG:   TOF_ANCHOR_62 → RTT: 96986 ps  Dist: 1454.8 cm[0m
+[0;32mI (239876) TAG: Position: X=132.8 cm  Y=0.0 cm[0m
+[1;31mE (239876) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (239876) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (239886) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (239886) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (244786) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (244786) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (244786) TAG: Total anchors found: 2[0m
+[0;32mI (244796) TAG: ========================================[0m
+[0;32mI (244796) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (244806) TAG: ========================================[0m
+[0;33mW (244806) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 66 mSec[0m
+[0;33mW (244816) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (245096) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 87.612 nSec, Avg RSSI: -68[0m
+[0;32mI (245096) TAG: FTM OK — RTT: 87612 ps  entries: 14[0m
+[0;32mI (245106) TAG:   TOF_ANCHOR_62 → RTT: 87612 ps  Dist: 1314.2 cm[0m
+[0;33mW (245306) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (245306) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (245566) wifi:FTM session ends with 12 valid readings out of 12 readings received, Avg raw RTT: 32.813 nSec, Avg RSSI: -72[0m
+[0;32mI (245576) TAG: FTM OK — RTT: 33333 ps  entries: 12[0m
+[0;32mI (245576) TAG:   TOF_ANCHOR_61 → RTT: 33333 ps  Dist: 500.0 cm[0m
+[0;32mI (245786) TAG: Position: X=82.8 cm  Y=0.0 cm[0m
+[1;31mE (245786) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (245786) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (245796) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (245796) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (250696) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (250696) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (250696) TAG: Total anchors found: 2[0m
+[0;32mI (250706) TAG: ========================================[0m
+[0;32mI (250706) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (250716) TAG: ========================================[0m
+[0;33mW (250716) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 95 mSec[0m
+[0;33mW (250726) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (251036) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 90.848 nSec, Avg RSSI: -68[0m
+[0;32mI (251036) TAG: FTM OK — RTT: 90848 ps  entries: 14[0m
+[0;32mI (251046) TAG:   TOF_ANCHOR_62 → RTT: 90848 ps  Dist: 1362.7 cm[0m
+[0;33mW (251246) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (251246) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (251506) wifi:FTM session ends with 11 valid readings out of 11 readings received, Avg raw RTT: 58.949 nSec, Avg RSSI: -71[0m
+[0;32mI (251506) TAG: FTM OK — RTT: 58949 ps  entries: 11[0m
+[0;32mI (251516) TAG:   TOF_ANCHOR_61 → RTT: 58949 ps  Dist: 884.2 cm[0m
+[0;32mI (251716) TAG: Position: X=118.1 cm  Y=0.0 cm[0m
+[1;31mE (251716) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (251716) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (251726) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (251726) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (256626) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (256626) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (256626) TAG: Total anchors found: 2[0m
+[0;32mI (256636) TAG: ========================================[0m
+[0;32mI (256636) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (256646) TAG: ========================================[0m
+[0;33mW (256646) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (256656) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (256936) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 51.339 nSec, Avg RSSI: -63[0m
+[0;32mI (256936) TAG: FTM OK — RTT: 51339 ps  entries: 14[0m
+[0;32mI (256946) TAG:   TOF_ANCHOR_61 → RTT: 51339 ps  Dist: 770.1 cm[0m
+[0;33mW (257146) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 13 mSec[0m
+[0;33mW (257146) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (257386) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 79.464 nSec, Avg RSSI: -71[0m
+[0;32mI (257386) TAG: FTM OK — RTT: 79464 ps  entries: 14[0m
+[0;32mI (257396) TAG:   TOF_ANCHOR_62 → RTT: 79464 ps  Dist: 1192.0 cm[0m
+[0;32mI (257596) TAG: Position: X=117.8 cm  Y=0.0 cm[0m
+[1;31mE (257596) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (257596) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (257606) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (257606) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (262506) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (262506) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (262506) TAG: Total anchors found: 2[0m
+[0;32mI (262516) TAG: ========================================[0m
+[0;32mI (262516) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (262526) TAG: ========================================[0m
+[0;33mW (264026) TAG: FTM failed — status: 3[0m
+[0;33mW (264226) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 102 mSec[0m
+[0;33mW (264226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (264546) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 98.798 nSec, Avg RSSI: -70[0m
+[0;32mI (264556) TAG: FTM OK — RTT: 98798 ps  entries: 13[0m
+[0;32mI (264556) TAG:   TOF_ANCHOR_62 → RTT: 98798 ps  Dist: 1482.0 cm[0m
+[0;33mW (264766) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (269666) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (269666) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (269666) TAG: Total anchors found: 2[0m
+[0;32mI (269676) TAG: ========================================[0m
+[0;32mI (269676) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (269686) TAG: ========================================[0m
+[0;33mW (269686) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 69 mSec[0m
+[0;33mW (269696) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (269986) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 101.116 nSec, Avg RSSI: -71[0m
+[0;32mI (269986) TAG: FTM OK — RTT: 101116 ps  entries: 14[0m
+[0;32mI (269986) TAG:   TOF_ANCHOR_62 → RTT: 101116 ps  Dist: 1516.7 cm[0m
+[0;33mW (271696) TAG: FTM failed — status: 3[0m
+[0;33mW (271896) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (276796) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (276796) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (276796) TAG: Total anchors found: 2[0m
+[0;32mI (276806) TAG: ========================================[0m
+[0;32mI (276806) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (276816) TAG: ========================================[0m
+[0;33mW (276816) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 107 mSec[0m
+[0;33mW (276826) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (277146) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 89.732 nSec, Avg RSSI: -70[0m
+[0;32mI (277146) TAG: FTM OK — RTT: 89732 ps  entries: 14[0m
+[0;32mI (277156) TAG:   TOF_ANCHOR_62 → RTT: 89732 ps  Dist: 1346.0 cm[0m
+[0;33mW (277856) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 51 mSec[0m
+[0;33mW (277866) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[1;31mE (278146) wifi:No FTM Measurements received from responder![0m
+[0;33mW (278146) TAG: FTM failed — status: 5[0m
+[0;33mW (278346) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (283246) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (283246) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (283246) TAG: Total anchors found: 2[0m
+[0;32mI (283256) TAG: ========================================[0m
+[0;32mI (283256) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (283266) TAG: ========================================[0m
+[0;33mW (283266) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 6 mSec[0m
+[0;33mW (283276) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (283506) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 91.629 nSec, Avg RSSI: -69[0m
+[0;32mI (283506) TAG: FTM OK — RTT: 91629 ps  entries: 14[0m
+[0;32mI (283506) TAG:   TOF_ANCHOR_62 → RTT: 91629 ps  Dist: 1374.4 cm[0m
+[0;33mW (283716) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 30 mSec[0m
+[0;33mW (283716) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (283966) wifi:FTM session ends with 8 valid readings out of 8 readings received, Avg raw RTT: 125.977 nSec, Avg RSSI: -73[0m
+[0;32mI (283966) TAG: FTM OK — RTT: 125977 ps  entries: 8[0m
+[0;32mI (283976) TAG:   TOF_ANCHOR_61 → RTT: 125977 ps  Dist: 1889.7 cm[0m
+[0;32mI (284176) TAG: Position: X=173.7 cm  Y=0.0 cm[0m
+[1;31mE (284176) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (284176) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (284186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (284186) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (289086) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (289086) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (289086) TAG: Total anchors found: 2[0m
+[0;32mI (289096) TAG: ========================================[0m
+[0;32mI (289096) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (289106) TAG: ========================================[0m
+[0;33mW (289106) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 105 mSec[0m
+[0;33mW (289116) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (289436) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 77.679 nSec, Avg RSSI: -66[0m
+[0;32mI (289436) TAG: FTM OK — RTT: 77679 ps  entries: 14[0m
+[0;32mI (289446) TAG:   TOF_ANCHOR_62 → RTT: 77679 ps  Dist: 1165.2 cm[0m
+[0;33mW (289646) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (289646) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (289926) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.277 nSec, Avg RSSI: -62[0m
+[0;32mI (289926) TAG: FTM OK — RTT: 62277 ps  entries: 14[0m
+[0;32mI (289926) TAG:   TOF_ANCHOR_61 → RTT: 62277 ps  Dist: 934.2 cm[0m
+[0;32mI (290136) TAG: Position: X=133.5 cm  Y=0.0 cm[0m
+[1;31mE (290136) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (290136) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (290146) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (290146) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (295046) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (295046) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (295046) TAG: Total anchors found: 2[0m
+[0;32mI (295056) TAG: ========================================[0m
+[0;32mI (295056) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (295066) TAG: ========================================[0m
+[0;33mW (295066) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 47 mSec[0m
+[0;33mW (295076) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (295336) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.723 nSec, Avg RSSI: -63[0m
+[0;32mI (295336) TAG: FTM OK — RTT: 62723 ps  entries: 14[0m
+[0;32mI (295346) TAG:   TOF_ANCHOR_61 → RTT: 62723 ps  Dist: 940.8 cm[0m
+[0;33mW (295546) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (295556) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (295786) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 67.909 nSec, Avg RSSI: -68[0m
+[0;32mI (295786) TAG: FTM OK — RTT: 67909 ps  entries: 13[0m
+[0;32mI (295786) TAG:   TOF_ANCHOR_62 → RTT: 67909 ps  Dist: 1018.6 cm[0m
+[0;32mI (295996) TAG: Position: X=144.1 cm  Y=0.0 cm[0m
+[1;31mE (295996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (295996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (296006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (296006) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (300906) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (300906) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (300906) TAG: Total anchors found: 2[0m
+[0;32mI (300916) TAG: ========================================[0m
+[0;32mI (300916) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (300926) TAG: ========================================[0m
+[0;33mW (300926) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 23 mSec[0m
+[0;33mW (300936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (301176) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 77.790 nSec, Avg RSSI: -64[0m
+[0;32mI (301176) TAG: FTM OK — RTT: 77790 ps  entries: 14[0m
+[0;32mI (301176) TAG:   TOF_ANCHOR_61 → RTT: 77790 ps  Dist: 1166.8 cm[0m
+[0;33mW (301386) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (301386) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (301616) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 74.219 nSec, Avg RSSI: -67[0m
+[0;32mI (301616) TAG: FTM OK — RTT: 74219 ps  entries: 14[0m
+[0;32mI (301626) TAG:   TOF_ANCHOR_62 → RTT: 74219 ps  Dist: 1113.3 cm[0m
+[0;32mI (301826) TAG: Position: X=153.5 cm  Y=0.0 cm[0m
+[1;31mE (301826) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (301826) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (301836) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (301836) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (306736) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (306736) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (306736) TAG: Total anchors found: 2[0m
+[0;32mI (306746) TAG: ========================================[0m
+[0;32mI (306746) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (306756) TAG: ========================================[0m
+[0;33mW (306756) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 68 mSec[0m
+[0;33mW (306766) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (307056) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 70.759 nSec, Avg RSSI: -63[0m
+[0;32mI (307056) TAG: FTM OK — RTT: 70759 ps  entries: 14[0m
+[0;32mI (307056) TAG:   TOF_ANCHOR_62 → RTT: 70759 ps  Dist: 1061.4 cm[0m
+[0;33mW (307266) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 32 mSec[0m
+[0;33mW (307266) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (307526) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 91.741 nSec, Avg RSSI: -65[0m
+[0;32mI (307526) TAG: FTM OK — RTT: 91741 ps  entries: 14[0m
+[0;32mI (307526) TAG:   TOF_ANCHOR_61 → RTT: 91741 ps  Dist: 1376.1 cm[0m
+[0;32mI (307736) TAG: Position: X=169.4 cm  Y=0.0 cm[0m
+[1;31mE (307736) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (307736) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (307746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (307746) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (312646) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (312646) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (312646) TAG: Total anchors found: 2[0m
+[0;32mI (312656) TAG: ========================================[0m
+[0;32mI (312656) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (312666) TAG: ========================================[0m
+[0;33mW (312666) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 98 mSec[0m
+[0;33mW (312676) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (312996) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.924 nSec, Avg RSSI: -65[0m
+[0;32mI (312996) TAG: FTM OK — RTT: 82924 ps  entries: 14[0m
+[0;32mI (313006) TAG:   TOF_ANCHOR_62 → RTT: 82924 ps  Dist: 1243.9 cm[0m
+[0;33mW (313206) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 31 mSec[0m
+[0;33mW (313206) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (313466) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 45.647 nSec, Avg RSSI: -66[0m
+[0;32mI (313466) TAG: FTM OK — RTT: 45647 ps  entries: 14[0m
+[0;32mI (313466) TAG:   TOF_ANCHOR_61 → RTT: 45647 ps  Dist: 684.7 cm[0m
+[0;32mI (313676) TAG: Position: X=106.6 cm  Y=0.0 cm[0m
+[1;31mE (313676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (313676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (313686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (313686) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (318586) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (318586) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (318586) TAG: Total anchors found: 2[0m
+[0;32mI (318596) TAG: ========================================[0m
+[0;32mI (318596) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (318606) TAG: ========================================[0m
+[0;33mW (318606) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 97 mSec[0m
+[0;33mW (318616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (318926) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 84.933 nSec, Avg RSSI: -64[0m
+[0;32mI (318926) TAG: FTM OK — RTT: 84933 ps  entries: 14[0m
+[0;32mI (318936) TAG:   TOF_ANCHOR_62 → RTT: 84933 ps  Dist: 1274.0 cm[0m
+[0;33mW (319136) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 40 mSec[0m
+[0;33mW (319136) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (319396) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 118.389 nSec, Avg RSSI: -69[0m
+[0;32mI (319406) TAG: FTM OK — RTT: 118389 ps  entries: 13[0m
+[0;32mI (319406) TAG:   TOF_ANCHOR_61 → RTT: 118389 ps  Dist: 1775.8 cm[0m
+[0;32mI (319616) TAG: Position: X=174.7 cm  Y=0.0 cm[0m
+[1;31mE (319616) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (319616) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (319626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (319626) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (324526) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (324526) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (324526) TAG: Total anchors found: 2[0m
+[0;32mI (324536) TAG: ========================================[0m
+[0;32mI (324536) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (324546) TAG: ========================================[0m
+[0;33mW (324546) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 95 mSec[0m
+[0;33mW (324556) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (324866) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 72.210 nSec, Avg RSSI: -62[0m
+[0;32mI (324866) TAG: FTM OK — RTT: 72210 ps  entries: 14[0m
+[0;32mI (324876) TAG:   TOF_ANCHOR_62 → RTT: 72210 ps  Dist: 1083.2 cm[0m
+[0;33mW (325076) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (325076) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (325336) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 103.348 nSec, Avg RSSI: -66[0m
+[0;32mI (325336) TAG: FTM OK — RTT: 103348 ps  entries: 14[0m
+[0;32mI (325346) TAG:   TOF_ANCHOR_61 → RTT: 103348 ps  Dist: 1550.2 cm[0m
+[0;32mI (325546) TAG: Position: X=176.6 cm  Y=0.0 cm[0m
+[1;31mE (325546) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (325546) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (325556) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (325556) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (330456) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (330456) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (330456) TAG: Total anchors found: 2[0m
+[0;32mI (330466) TAG: ========================================[0m
+[0;32mI (330466) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (330476) TAG: ========================================[0m
+[0;33mW (330476) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 104 mSec[0m
+[0;33mW (330486) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (330806) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 74.442 nSec, Avg RSSI: -72[0m
+[0;32mI (330806) TAG: FTM OK — RTT: 74442 ps  entries: 14[0m
+[0;32mI (330816) TAG:   TOF_ANCHOR_62 → RTT: 74442 ps  Dist: 1116.6 cm[0m
+[0;33mW (331016) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (331016) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (331276) wifi:FTM session ends with 8 valid readings out of 8 readings received, Avg raw RTT: 73.633 nSec, Avg RSSI: -73[0m
+[0;32mI (331276) TAG: FTM OK — RTT: 73633 ps  entries: 8[0m
+[0;32mI (331286) TAG:   TOF_ANCHOR_61 → RTT: 73633 ps  Dist: 1104.5 cm[0m
+[0;32mI (331486) TAG: Position: X=149.2 cm  Y=0.0 cm[0m
+[1;31mE (331486) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (331486) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (331496) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (331496) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (336396) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (336396) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (336396) TAG: Total anchors found: 2[0m
+[0;32mI (336406) TAG: ========================================[0m
+[0;32mI (336406) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (336416) TAG: ========================================[0m
+[0;33mW (336416) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 103 mSec[0m
+[0;33mW (336426) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (336746) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 60.714 nSec, Avg RSSI: -74[0m
+[0;32mI (336746) TAG: FTM OK — RTT: 60714 ps  entries: 14[0m
+[0;32mI (336746) TAG:   TOF_ANCHOR_62 → RTT: 60714 ps  Dist: 910.7 cm[0m
+[0;33mW (338456) TAG: FTM failed — status: 3[0m
+[0;33mW (338656) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (343556) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (343556) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (343556) TAG: Total anchors found: 2[0m
+[0;32mI (343566) TAG: ========================================[0m
+[0;32mI (343566) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (343576) TAG: ========================================[0m
+[0;33mW (343576) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 74 mSec[0m
+[0;33mW (343586) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (343876) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 98.326 nSec, Avg RSSI: -68[0m
+[0;32mI (343876) TAG: FTM OK — RTT: 98326 ps  entries: 14[0m
+[0;32mI (343886) TAG:   TOF_ANCHOR_61 → RTT: 98326 ps  Dist: 1474.9 cm[0m
+[0;33mW (344086) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (344086) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (344316) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 99.219 nSec, Avg RSSI: -73[0m
+[0;32mI (344326) TAG: FTM OK — RTT: 99219 ps  entries: 14[0m
+[0;32mI (344326) TAG:   TOF_ANCHOR_62 → RTT: 99219 ps  Dist: 1488.3 cm[0m
+[0;32mI (344536) TAG: Position: X=149.3 cm  Y=0.0 cm[0m
+[1;31mE (344536) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (344536) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (344546) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (344546) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (349446) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (349446) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (349446) TAG: Total anchors found: 2[0m
+[0;32mI (349456) TAG: ========================================[0m
+[0;32mI (349456) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (349466) TAG: ========================================[0m
+[0;33mW (349466) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 19 mSec[0m
+[0;33mW (349476) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (349716) wifi:FTM session ends with 10 valid readings out of 10 readings received, Avg raw RTT: 88.594 nSec, Avg RSSI: -69[0m
+[0;32mI (349716) TAG: FTM OK — RTT: 88594 ps  entries: 10[0m
+[0;32mI (349716) TAG:   TOF_ANCHOR_61 → RTT: 88594 ps  Dist: 1328.9 cm[0m
+[0;33mW (349926) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (349926) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (350156) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 100.670 nSec, Avg RSSI: -72[0m
+[0;32mI (350156) TAG: FTM OK — RTT: 100670 ps  entries: 14[0m
+[0;32mI (350166) TAG:   TOF_ANCHOR_62 → RTT: 100670 ps  Dist: 1510.0 cm[0m
+[0;32mI (350366) TAG: Position: X=140.4 cm  Y=0.0 cm[0m
+[1;31mE (350366) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (350366) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (350376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (350376) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (355276) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (355276) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (355276) TAG: Total anchors found: 2[0m
+[0;32mI (355286) TAG: ========================================[0m
+[0;32mI (355286) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (355296) TAG: ========================================[0m
+[0;33mW (355296) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 27 mSec[0m
+[0;33mW (355306) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (355546) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.143 nSec, Avg RSSI: -70[0m
+[0;32mI (355556) TAG: FTM OK — RTT: 82143 ps  entries: 14[0m
+[0;32mI (355556) TAG:   TOF_ANCHOR_61 → RTT: 82143 ps  Dist: 1232.1 cm[0m
+[0;33mW (355756) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (355756) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (355996) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 77.455 nSec, Avg RSSI: -71[0m
+[0;32mI (355996) TAG: FTM OK — RTT: 77455 ps  entries: 14[0m
+[0;32mI (355996) TAG:   TOF_ANCHOR_62 → RTT: 77455 ps  Dist: 1161.8 cm[0m
+[0;32mI (356206) TAG: Position: X=154.4 cm  Y=0.0 cm[0m
+[1;31mE (356206) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (356206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (356216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (356216) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (361116) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (361116) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (361116) TAG: Total anchors found: 2[0m
+[0;32mI (361126) TAG: ========================================[0m
+[0;32mI (361126) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (361136) TAG: ========================================[0m
+[0;33mW (361136) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 24 mSec[0m
+[0;33mW (361146) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (361386) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 75.893 nSec, Avg RSSI: -64[0m
+[0;32mI (361386) TAG: FTM OK — RTT: 75893 ps  entries: 14[0m
+[0;32mI (361396) TAG:   TOF_ANCHOR_61 → RTT: 75893 ps  Dist: 1138.4 cm[0m
+[0;33mW (361596) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (361596) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (361836) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 44.754 nSec, Avg RSSI: -68[0m
+[0;32mI (361836) TAG: FTM OK — RTT: 44754 ps  entries: 14[0m
+[0;32mI (361836) TAG:   TOF_ANCHOR_62 → RTT: 44754 ps  Dist: 671.3 cm[0m
+[0;32mI (362046) TAG: Position: X=188.7 cm  Y=0.0 cm[0m
+[1;31mE (362046) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (362046) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (362056) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (362056) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (366956) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (366956) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (366956) TAG: Total anchors found: 2[0m
+[0;32mI (366966) TAG: ========================================[0m
+[0;32mI (366966) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (366976) TAG: ========================================[0m
+[0;33mW (366976) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 21 mSec[0m
+[0;33mW (366986) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (367226) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.317 nSec, Avg RSSI: -64[0m
+[0;32mI (367226) TAG: FTM OK — RTT: 71317 ps  entries: 14[0m
+[0;32mI (367226) TAG:   TOF_ANCHOR_61 → RTT: 71317 ps  Dist: 1069.8 cm[0m
+[0;33mW (367436) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (367436) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (367666) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 64.621 nSec, Avg RSSI: -70[0m
+[0;32mI (367666) TAG: FTM OK — RTT: 64621 ps  entries: 14[0m
+[0;32mI (367676) TAG:   TOF_ANCHOR_62 → RTT: 64621 ps  Dist: 969.3 cm[0m
+[0;32mI (367876) TAG: Position: X=157.4 cm  Y=0.0 cm[0m
+[1;31mE (367876) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (367876) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (367886) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (367886) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (372786) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (372786) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (372786) TAG: Total anchors found: 2[0m
+[0;32mI (372796) TAG: ========================================[0m
+[0;32mI (372796) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (372796) TAG: ========================================[0m
+[0;33mW (372806) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 27 mSec[0m
+[0;33mW (372816) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (373056) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 79.799 nSec, Avg RSSI: -63[0m
+[0;32mI (373066) TAG: FTM OK — RTT: 79799 ps  entries: 14[0m
+[0;32mI (373066) TAG:   TOF_ANCHOR_61 → RTT: 79799 ps  Dist: 1197.0 cm[0m
+[0;33mW (373266) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (373266) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (373506) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.384 nSec, Avg RSSI: -72[0m
+[0;32mI (373506) TAG: FTM OK — RTT: 61384 ps  entries: 14[0m
+[0;32mI (373506) TAG:   TOF_ANCHOR_62 → RTT: 61384 ps  Dist: 920.8 cm[0m
+[0;32mI (373716) TAG: Position: X=169.5 cm  Y=0.0 cm[0m
+[1;31mE (373716) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (373716) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (373726) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (373726) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (378626) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (378626) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (378626) TAG: Total anchors found: 2[0m
+[0;32mI (378636) TAG: ========================================[0m
+[0;32mI (378636) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (378646) TAG: ========================================[0m
+[0;33mW (378656) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 23 mSec[0m
+[0;33mW (378656) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (378896) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 100.841 nSec, Avg RSSI: -70[0m
+[0;32mI (378896) TAG: FTM OK — RTT: 100841 ps  entries: 13[0m
+[0;32mI (378906) TAG:   TOF_ANCHOR_61 → RTT: 100841 ps  Dist: 1512.6 cm[0m
+[0;33mW (379106) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (379116) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (379346) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 127.790 nSec, Avg RSSI: -68[0m
+[0;32mI (379346) TAG: FTM OK — RTT: 127790 ps  entries: 14[0m
+[0;32mI (379346) TAG:   TOF_ANCHOR_62 → RTT: 127790 ps  Dist: 1916.8 cm[0m
+[0;32mI (379556) TAG: Position: X=132.3 cm  Y=0.0 cm[0m
+[1;31mE (379556) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (379556) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (379566) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (379566) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (384466) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (384466) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (384466) TAG: Total anchors found: 2[0m
+[0;32mI (384476) TAG: ========================================[0m
+[0;32mI (384476) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (384486) TAG: ========================================[0m
+[0;33mW (384486) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 21 mSec[0m
+[0;33mW (384496) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[1;31mE (384736) wifi:No FTM Measurements received from responder![0m
+[0;33mW (384736) TAG: FTM failed — status: 5[0m
+[0;33mW (384936) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 20 mSec[0m
+[0;33mW (384936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (385176) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 55.357 nSec, Avg RSSI: -63[0m
+[0;32mI (385176) TAG: FTM OK — RTT: 55357 ps  entries: 14[0m
+[0;32mI (385186) TAG:   TOF_ANCHOR_62 → RTT: 55357 ps  Dist: 830.4 cm[0m
+[0;33mW (385386) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (390286) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (390286) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (390286) TAG: Total anchors found: 2[0m
+[0;32mI (390296) TAG: ========================================[0m
+[0;32mI (390296) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (390306) TAG: ========================================[0m
+[0;33mW (390306) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (390316) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (390576) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 59.598 nSec, Avg RSSI: -65[0m
+[0;32mI (390576) TAG: FTM OK — RTT: 59598 ps  entries: 14[0m
+[0;32mI (390576) TAG:   TOF_ANCHOR_61 → RTT: 59598 ps  Dist: 894.0 cm[0m
+[0;33mW (390786) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (390786) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (391016) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 21.34 nSec, Avg RSSI: -78[0m
+[0;32mI (391016) TAG: FTM OK — RTT: 21034 ps  entries: 13[0m
+[0;32mI (391016) TAG:   TOF_ANCHOR_62 → RTT: 21034 ps  Dist: 315.5 cm[0m
+[0;32mI (391226) TAG: Position: X=221.6 cm  Y=0.0 cm[0m
+[1;31mE (391226) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (391226) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (391236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (391236) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (396136) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (396136) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (396136) TAG: Total anchors found: 2[0m
+[0;32mI (396146) TAG: ========================================[0m
+[0;32mI (396146) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (396156) TAG: ========================================[0m
+[0;33mW (396156) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 24 mSec[0m
+[0;33mW (396166) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (396406) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 73.772 nSec, Avg RSSI: -66[0m
+[0;32mI (396406) TAG: FTM OK — RTT: 73772 ps  entries: 14[0m
+[0;32mI (396416) TAG:   TOF_ANCHOR_61 → RTT: 73772 ps  Dist: 1106.6 cm[0m
+[0;33mW (396616) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 13 mSec[0m
+[0;33mW (396616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (396856) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 48.772 nSec, Avg RSSI: -57[0m
+[0;32mI (396856) TAG: FTM OK — RTT: 48772 ps  entries: 14[0m
+[0;32mI (396856) TAG:   TOF_ANCHOR_62 → RTT: 48772 ps  Dist: 731.6 cm[0m
+[0;32mI (397066) TAG: Position: X=180.6 cm  Y=0.0 cm[0m
+[1;31mE (397066) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (397066) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (397076) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (397076) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (401976) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (401976) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (401976) TAG: Total anchors found: 2[0m
+[0;32mI (401986) TAG: ========================================[0m
+[0;32mI (401986) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (401996) TAG: ========================================[0m
+[0;33mW (401996) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 22 mSec[0m
+[0;33mW (402006) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (402246) wifi:FTM session ends with 12 valid readings out of 12 readings received, Avg raw RTT: 101.432 nSec, Avg RSSI: -62[0m
+[0;32mI (402246) TAG: FTM OK — RTT: 101432 ps  entries: 12[0m
+[0;32mI (402246) TAG:   TOF_ANCHOR_61 → RTT: 101432 ps  Dist: 1521.5 cm[0m
+[0;33mW (402456) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (402456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (402696) wifi:FTM session ends with 10 valid readings out of 10 readings received, Avg raw RTT: 140.0 nSec, Avg RSSI: -80[0m
+[0;32mI (402696) TAG: FTM OK — RTT: 140000 ps  entries: 10[0m
+[0;32mI (402696) TAG:   TOF_ANCHOR_62 → RTT: 140000 ps  Dist: 2100.0 cm[0m
+[0;32mI (402906) TAG: Position: X=126.1 cm  Y=0.0 cm[0m
+[1;31mE (402906) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (402906) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (402916) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (402916) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (407816) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (407816) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (407816) TAG: Total anchors found: 2[0m
+[0;32mI (407826) TAG: ========================================[0m
+[0;32mI (407826) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (407836) TAG: ========================================[0m
+[0;33mW (407846) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 16 mSec[0m
+[0;33mW (407846) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (408076) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 65.67 nSec, Avg RSSI: -55[0m
+[0;32mI (408076) TAG: FTM OK — RTT: 65067 ps  entries: 14[0m
+[0;32mI (408086) TAG:   TOF_ANCHOR_61 → RTT: 65067 ps  Dist: 976.0 cm[0m
+[0;33mW (408286) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 17 mSec[0m
+[0;33mW (408286) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (408526) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 62.19 nSec, Avg RSSI: -62[0m
+[0;32mI (408526) TAG: FTM OK — RTT: 62019 ps  entries: 13[0m
+[0;32mI (408526) TAG:   TOF_ANCHOR_62 → RTT: 62019 ps  Dist: 930.3 cm[0m
+[0;32mI (408736) TAG: Position: X=153.6 cm  Y=0.0 cm[0m
+[1;31mE (408736) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (408736) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (408746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (408746) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (413646) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (413646) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (413646) TAG: Total anchors found: 2[0m
+[0;32mI (413656) TAG: ========================================[0m
+[0;32mI (413656) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (413666) TAG: ========================================[0m
+[0;33mW (413666) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 25 mSec[0m
+[0;33mW (413676) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (413916) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.31 nSec, Avg RSSI: -66[0m
+[0;32mI (413916) TAG: FTM OK — RTT: 82031 ps  entries: 14[0m
+[0;32mI (413926) TAG:   TOF_ANCHOR_61 → RTT: 82031 ps  Dist: 1230.5 cm[0m
+[0;33mW (414126) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 14 mSec[0m
+[0;33mW (414126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (414366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 65.960 nSec, Avg RSSI: -80[0m
+[0;32mI (414366) TAG: FTM OK — RTT: 65960 ps  entries: 14[0m
+[0;32mI (414366) TAG:   TOF_ANCHOR_62 → RTT: 65960 ps  Dist: 989.4 cm[0m
+[0;32mI (414576) TAG: Position: X=166.3 cm  Y=0.0 cm[0m
+[1;31mE (414576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (414576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (414586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (414586) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (419486) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (419486) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (419486) TAG: Total anchors found: 2[0m
+[0;32mI (419496) TAG: ========================================[0m
+[0;32mI (419496) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (419506) TAG: ========================================[0m
+[0;33mW (419506) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 22 mSec[0m
+[0;33mW (419516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (419756) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 52.790 nSec, Avg RSSI: -61[0m
+[0;32mI (419756) TAG: FTM OK — RTT: 52790 ps  entries: 14[0m
+[0;32mI (419756) TAG:   TOF_ANCHOR_61 → RTT: 52790 ps  Dist: 791.8 cm[0m
+[0;33mW (419966) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 10 mSec[0m
+[0;33mW (419966) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (420196) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 41.295 nSec, Avg RSSI: -67[0m
+[0;32mI (420196) TAG: FTM OK — RTT: 41295 ps  entries: 14[0m
+[0;32mI (420206) TAG:   TOF_ANCHOR_62 → RTT: 41295 ps  Dist: 619.4 cm[0m
+[0;32mI (420406) TAG: Position: X=168.3 cm  Y=0.0 cm[0m
+[1;31mE (420406) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (420406) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (420416) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (420416) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (425316) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (425316) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (425316) TAG: Total anchors found: 2[0m
+[0;32mI (425326) TAG: ========================================[0m
+[0;32mI (425326) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (425336) TAG: ========================================[0m
+[0;33mW (425336) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 29 mSec[0m
+[0;33mW (425346) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (425606) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 81.920 nSec, Avg RSSI: -64[0m
+[0;32mI (425606) TAG: FTM OK — RTT: 81920 ps  entries: 7[0m
+[0;32mI (425606) TAG:   TOF_ANCHOR_61 → RTT: 81920 ps  Dist: 1228.8 cm[0m
+[0;33mW (425816) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 99 mSec[0m
+[0;33mW (425816) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (426136) wifi:FTM session ends with 11 valid readings out of 12 readings received, Avg raw RTT: 71.733 nSec, Avg RSSI: -75[0m
+[0;32mI (426136) TAG: FTM OK — RTT: 357979696 ps  entries: 12[0m
+[0;32mI (426146) TAG:   TOF_ANCHOR_62 → RTT: 357979696 ps  Dist: 5369695.5 cm[0m
+[0;32mI (426356) TAG: Position: X=0.1 cm  Y=0.0 cm[0m
+[1;31mE (426356) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (426356) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (426366) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (426366) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (431266) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (431266) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (431266) TAG: Total anchors found: 2[0m
+[0;32mI (431276) TAG: ========================================[0m
+[0;32mI (431276) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (431276) TAG: ========================================[0m
+[0;33mW (431296) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 15 mSec[0m
+[0;33mW (431296) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (431526) wifi:FTM session ends with 8 valid readings out of 8 readings received, Avg raw RTT: 75.195 nSec, Avg RSSI: -65[0m
+[0;32mI (431526) TAG: FTM OK — RTT: 75195 ps  entries: 8[0m
+[0;32mI (431536) TAG:   TOF_ANCHOR_61 → RTT: 75195 ps  Dist: 1127.9 cm[0m
+[0;33mW (431736) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (431736) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (431976) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.317 nSec, Avg RSSI: -67[0m
+[0;32mI (431976) TAG: FTM OK — RTT: 71317 ps  entries: 14[0m
+[0;32mI (431976) TAG:   TOF_ANCHOR_62 → RTT: 71317 ps  Dist: 1069.8 cm[0m
+[0;32mI (432186) TAG: Position: X=154.0 cm  Y=0.0 cm[0m
+[1;31mE (432186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (432186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (432196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (432196) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (437096) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (437096) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (437096) TAG: Total anchors found: 2[0m
+[0;32mI (437106) TAG: ========================================[0m
+[0;32mI (437106) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (437116) TAG: ========================================[0m
+[0;33mW (437116) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 25 mSec[0m
+[0;33mW (437126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (437366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 85.491 nSec, Avg RSSI: -62[0m
+[0;32mI (437366) TAG: FTM OK — RTT: 85491 ps  entries: 14[0m
+[0;32mI (437376) TAG:   TOF_ANCHOR_61 → RTT: 85491 ps  Dist: 1282.4 cm[0m
+[0;33mW (437576) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 13 mSec[0m
+[0;33mW (437586) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (437816) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 43.80 nSec, Avg RSSI: -66[0m
+[0;32mI (437816) TAG: FTM OK — RTT: 43080 ps  entries: 14[0m
+[0;32mI (437816) TAG:   TOF_ANCHOR_62 → RTT: 43080 ps  Dist: 646.2 cm[0m
+[0;32mI (438026) TAG: Position: X=199.4 cm  Y=0.0 cm[0m
+[1;31mE (438026) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (438026) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (438036) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (438036) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (442936) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (442936) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (442936) TAG: Total anchors found: 2[0m
+[0;32mI (442946) TAG: ========================================[0m
+[0;32mI (442946) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (442946) TAG: ========================================[0m
+[0;33mW (442956) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 21 mSec[0m
+[0;33mW (442966) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (443206) wifi:FTM session ends with 5 valid readings out of 5 readings received, Avg raw RTT: 76.250 nSec, Avg RSSI: -71[0m
+[0;32mI (443206) TAG: FTM OK — RTT: 76250 ps  entries: 5[0m
+[0;32mI (443206) TAG:   TOF_ANCHOR_61 → RTT: 76250 ps  Dist: 1143.8 cm[0m
+[0;33mW (443416) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 10 mSec[0m
+[0;33mW (443416) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (443646) wifi:FTM session ends with 11 valid readings out of 11 readings received, Avg raw RTT: 72.443 nSec, Avg RSSI: -70[0m
+[0;32mI (443656) TAG: FTM OK — RTT: 72443 ps  entries: 11[0m
+[0;32mI (443656) TAG:   TOF_ANCHOR_62 → RTT: 72443 ps  Dist: 1086.6 cm[0m
+[0;32mI (443856) TAG: Position: X=153.8 cm  Y=0.0 cm[0m
+[1;31mE (443856) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (443856) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (443866) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (443866) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (448766) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (448766) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (448766) TAG: Total anchors found: 2[0m
+[0;32mI (448776) TAG: ========================================[0m
+[0;32mI (448776) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (448786) TAG: ========================================[0m
+[0;33mW (448786) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 67 mSec[0m
+[0;33mW (448796) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (449076) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 60.938 nSec, Avg RSSI: -73[0m
+[0;32mI (449076) TAG: FTM OK — RTT: 60938 ps  entries: 14[0m
+[0;32mI (449086) TAG:   TOF_ANCHOR_62 → RTT: 60938 ps  Dist: 914.1 cm[0m
+[0;33mW (449296) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 36 mSec[0m
+[0;33mW (449296) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[1;31mE (449566) wifi:No FTM Measurements received from responder![0m
+[0;33mW (449566) TAG: FTM failed — status: 5[0m
+[0;33mW (449766) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (454666) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (454666) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (454666) TAG: Total anchors found: 2[0m
+[0;32mI (454676) TAG: ========================================[0m
+[0;32mI (454676) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (454686) TAG: ========================================[0m
+[0;33mW (454686) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 106 mSec[0m
+[0;33mW (454696) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (455016) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.942 nSec, Avg RSSI: -57[0m
+[0;32mI (455016) TAG: FTM OK — RTT: 61942 ps  entries: 14[0m
+[0;32mI (455026) TAG:   TOF_ANCHOR_62 → RTT: 61942 ps  Dist: 929.1 cm[0m
+[0;33mW (455226) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (455226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (455486) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 70.424 nSec, Avg RSSI: -57[0m
+[0;32mI (455486) TAG: FTM OK — RTT: 70424 ps  entries: 14[0m
+[0;32mI (455496) TAG:   TOF_ANCHOR_61 → RTT: 70424 ps  Dist: 1056.4 cm[0m
+[0;32mI (455696) TAG: Position: X=159.6 cm  Y=0.0 cm[0m
+[1;31mE (455696) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (455696) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (455706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (455706) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (460606) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (460606) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (460606) TAG: Total anchors found: 2[0m
+[0;32mI (460616) TAG: ========================================[0m
+[0;32mI (460616) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (460626) TAG: ========================================[0m
+[0;33mW (460626) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (460636) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (460916) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 74.330 nSec, Avg RSSI: -57[0m
+[0;32mI (460916) TAG: FTM OK — RTT: 74330 ps  entries: 14[0m
+[0;32mI (460926) TAG:   TOF_ANCHOR_61 → RTT: 74330 ps  Dist: 1114.9 cm[0m
+[0;33mW (461126) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (461126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (461366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 70.89 nSec, Avg RSSI: -58[0m
+[0;32mI (461366) TAG: FTM OK — RTT: 70089 ps  entries: 14[0m
+[0;32mI (461376) TAG:   TOF_ANCHOR_62 → RTT: 70089 ps  Dist: 1051.3 cm[0m
+[0;32mI (461576) TAG: Position: X=154.4 cm  Y=0.0 cm[0m
+[1;31mE (461576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (461576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (461586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (461586) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (466486) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (466486) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (466486) TAG: Total anchors found: 2[0m
+[0;32mI (466496) TAG: ========================================[0m
+[0;32mI (466496) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (466506) TAG: ========================================[0m
+[0;33mW (466506) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 23 mSec[0m
+[0;33mW (466516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (466756) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 74.665 nSec, Avg RSSI: -56[0m
+[0;32mI (466756) TAG: FTM OK — RTT: 74665 ps  entries: 14[0m
+[0;32mI (466766) TAG:   TOF_ANCHOR_61 → RTT: 74665 ps  Dist: 1120.0 cm[0m
+[0;33mW (466966) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (466966) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (467206) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.875 nSec, Avg RSSI: -58[0m
+[0;32mI (467206) TAG: FTM OK — RTT: 71875 ps  entries: 14[0m
+[0;32mI (467206) TAG:   TOF_ANCHOR_62 → RTT: 71875 ps  Dist: 1078.1 cm[0m
+[0;32mI (467416) TAG: Position: X=152.9 cm  Y=0.0 cm[0m
+[1;31mE (467416) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (467416) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (467426) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (467426) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (472326) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (472326) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (472326) TAG: Total anchors found: 2[0m
+[0;32mI (472336) TAG: ========================================[0m
+[0;32mI (472336) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (472346) TAG: ========================================[0m
+[0;33mW (472346) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 20 mSec[0m
+[0;33mW (472356) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (472596) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 88.101 nSec, Avg RSSI: -56[0m
+[0;32mI (472596) TAG: FTM OK — RTT: 88101 ps  entries: 13[0m
+[0;32mI (472596) TAG:   TOF_ANCHOR_61 → RTT: 88101 ps  Dist: 1321.5 cm[0m
+[0;33mW (472806) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (472806) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (473036) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.987 nSec, Avg RSSI: -59[0m
+[0;32mI (473036) TAG: FTM OK — RTT: 71987 ps  entries: 14[0m
+[0;32mI (473046) TAG:   TOF_ANCHOR_62 → RTT: 71987 ps  Dist: 1079.8 cm[0m
+[0;32mI (473246) TAG: Position: X=165.1 cm  Y=0.0 cm[0m
+[1;31mE (473246) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (473246) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (473256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (473256) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (478156) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (478156) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (478156) TAG: Total anchors found: 2[0m
+[0;32mI (478166) TAG: ========================================[0m
+[0;32mI (478166) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (478176) TAG: ========================================[0m
+[0;33mW (478176) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 66 mSec[0m
+[0;33mW (478186) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (478466) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 85.938 nSec, Avg RSSI: -66[0m
+[0;32mI (478476) TAG: FTM OK — RTT: 85938 ps  entries: 14[0m
+[0;32mI (478476) TAG:   TOF_ANCHOR_62 → RTT: 85938 ps  Dist: 1289.1 cm[0m
+[0;33mW (478676) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (478676) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (478936) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 81.585 nSec, Avg RSSI: -66[0m
+[0;32mI (478936) TAG: FTM OK — RTT: 81585 ps  entries: 14[0m
+[0;32mI (478946) TAG:   TOF_ANCHOR_61 → RTT: 81585 ps  Dist: 1223.8 cm[0m
+[0;32mI (479146) TAG: Position: X=146.1 cm  Y=0.0 cm[0m
+[1;31mE (479146) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (479146) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (479156) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (479156) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (484056) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (484056) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (484056) TAG: Total anchors found: 2[0m
+[0;32mI (484066) TAG: ========================================[0m
+[0;32mI (484066) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (484076) TAG: ========================================[0m
+[0;33mW (484076) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (484086) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (484366) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 80.769 nSec, Avg RSSI: -69[0m
+[0;32mI (484366) TAG: FTM OK — RTT: 80769 ps  entries: 13[0m
+[0;32mI (484376) TAG:   TOF_ANCHOR_61 → RTT: 80769 ps  Dist: 1211.5 cm[0m
+[0;33mW (484576) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (484576) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (484816) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 38.58 nSec, Avg RSSI: -65[0m
+[0;32mI (484816) TAG: FTM OK — RTT: 38058 ps  entries: 14[0m
+[0;32mI (484816) TAG:   TOF_ANCHOR_62 → RTT: 38058 ps  Dist: 570.9 cm[0m
+[0;32mI (485026) TAG: Position: X=203.9 cm  Y=0.0 cm[0m
+[1;31mE (485026) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (485026) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (485036) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (485036) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (489936) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (489936) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (489936) TAG: Total anchors found: 2[0m
+[0;32mI (489946) TAG: ========================================[0m
+[0;32mI (489946) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (489956) TAG: ========================================[0m
+[0;33mW (489956) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 61 mSec[0m
+[0;33mW (489966) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (490246) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 37.723 nSec, Avg RSSI: -63[0m
+[0;32mI (490246) TAG: FTM OK — RTT: 37723 ps  entries: 14[0m
+[0;32mI (490246) TAG:   TOF_ANCHOR_62 → RTT: 37723 ps  Dist: 565.8 cm[0m
+[0;33mW (490456) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 35 mSec[0m
+[0;33mW (490456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (490716) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 73.884 nSec, Avg RSSI: -55[0m
+[0;32mI (490716) TAG: FTM OK — RTT: 73884 ps  entries: 14[0m
+[0;32mI (490716) TAG:   TOF_ANCHOR_61 → RTT: 73884 ps  Dist: 1108.3 cm[0m
+[0;32mI (490926) TAG: Position: X=198.5 cm  Y=0.0 cm[0m
+[1;31mE (490926) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (490926) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (490936) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (490936) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (495836) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (495836) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (495836) TAG: Total anchors found: 2[0m
+[0;32mI (495846) TAG: ========================================[0m
+[0;32mI (495846) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (495856) TAG: ========================================[0m
+[0;33mW (495856) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 62 mSec[0m
+[0;33mW (495866) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (496146) wifi:FTM session ends with 10 valid readings out of 10 readings received, Avg raw RTT: 70.625 nSec, Avg RSSI: -68[0m
+[0;32mI (496146) TAG: FTM OK — RTT: 70625 ps  entries: 10[0m
+[0;32mI (496146) TAG:   TOF_ANCHOR_61 → RTT: 70625 ps  Dist: 1059.4 cm[0m
+[0;33mW (496356) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 9 mSec[0m
+[0;33mW (496356) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (496586) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 122.321 nSec, Avg RSSI: -71[0m
+[0;32mI (496586) TAG: FTM OK — RTT: 122321 ps  entries: 14[0m
+[0;32mI (496596) TAG:   TOF_ANCHOR_62 → RTT: 122321 ps  Dist: 1834.8 cm[0m
+[0;32mI (496806) TAG: Position: X=109.8 cm  Y=0.0 cm[0m
+[1;31mE (496806) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (496806) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (496816) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (496816) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (501716) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (501716) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (501716) TAG: Total anchors found: 2[0m
+[0;32mI (501726) TAG: ========================================[0m
+[0;32mI (501726) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (501736) TAG: ========================================[0m
+[0;33mW (501736) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 58 mSec[0m
+[0;33mW (501746) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (502016) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 87.388 nSec, Avg RSSI: -68[0m
+[0;32mI (502026) TAG: FTM OK — RTT: 87388 ps  entries: 14[0m
+[0;32mI (502026) TAG:   TOF_ANCHOR_62 → RTT: 87388 ps  Dist: 1310.8 cm[0m
+[0;33mW (502236) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 31 mSec[0m
+[0;33mW (502236) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (502486) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 43.192 nSec, Avg RSSI: -66[0m
+[0;32mI (502496) TAG: FTM OK — RTT: 43192 ps  entries: 14[0m
+[0;32mI (502496) TAG:   TOF_ANCHOR_61 → RTT: 43192 ps  Dist: 647.9 cm[0m
+[0;32mI (502706) TAG: Position: X=99.3 cm  Y=0.0 cm[0m
+[1;31mE (502706) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (502706) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (502716) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (502716) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (507616) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (507616) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (507616) TAG: Total anchors found: 2[0m
+[0;32mI (507626) TAG: ========================================[0m
+[0;32mI (507626) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (507626) TAG: ========================================[0m
+[0;33mW (507636) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 58 mSec[0m
+[0;33mW (507646) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (507936) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 69.196 nSec, Avg RSSI: -73[0m
+[0;32mI (507936) TAG: FTM OK — RTT: 69196 ps  entries: 7[0m
+[0;32mI (507936) TAG:   TOF_ANCHOR_61 → RTT: 69196 ps  Dist: 1037.9 cm[0m
+[0;33mW (508146) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 100 mSec[0m
+[0;33mW (508146) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (508466) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 40.960 nSec, Avg RSSI: -65[0m
+[0;32mI (508466) TAG: FTM OK — RTT: 40960 ps  entries: 14[0m
+[0;32mI (508476) TAG:   TOF_ANCHOR_62 → RTT: 40960 ps  Dist: 614.4 cm[0m
+[0;32mI (508676) TAG: Position: X=188.4 cm  Y=0.0 cm[0m
+[1;31mE (508676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (508676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (508686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (508686) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (513586) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (513586) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (513586) TAG: Total anchors found: 2[0m
+[0;32mI (513596) TAG: ========================================[0m
+[0;32mI (513596) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (513596) TAG: ========================================[0m
+[0;33mW (515106) TAG: FTM failed — status: 3[0m
+[0;33mW (515306) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 105 mSec[0m
+[0;33mW (515316) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (515636) wifi:FTM session ends with 10 valid readings out of 10 readings received, Avg raw RTT: 95.781 nSec, Avg RSSI: -82[0m
+[0;32mI (515636) TAG: FTM OK — RTT: 95781 ps  entries: 10[0m
+[0;32mI (515646) TAG:   TOF_ANCHOR_62 → RTT: 95781 ps  Dist: 1436.7 cm[0m
+[0;33mW (515846) TAG: Not enough FTM measurements for position fix[0m
+[0;32mI (520746) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (520746) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (520746) TAG: Total anchors found: 2[0m
+[0;32mI (520756) TAG: ========================================[0m
+[0;32mI (520756) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (520766) TAG: ========================================[0m
+[0;33mW (521266) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 48 mSec[0m
+[0;33mW (521266) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (521536) wifi:FTM session ends with 10 valid readings out of 10 readings received, Avg raw RTT: 70.313 nSec, Avg RSSI: -67[0m
+[0;32mI (521536) TAG: FTM OK — RTT: 70313 ps  entries: 10[0m
+[0;32mI (521546) TAG:   TOF_ANCHOR_61 → RTT: 70313 ps  Dist: 1054.7 cm[0m
+[0;33mW (521746) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (521746) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (521986) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 68.527 nSec, Avg RSSI: -67[0m
+[0;32mI (521986) TAG: FTM OK — RTT: 68527 ps  entries: 14[0m
+[0;32mI (521986) TAG:   TOF_ANCHOR_62 → RTT: 68527 ps  Dist: 1027.9 cm[0m
+[0;32mI (522196) TAG: Position: X=151.9 cm  Y=0.0 cm[0m
+[1;31mE (522196) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (522196) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (522206) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (522206) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (527106) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (527106) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (527106) TAG: Total anchors found: 2[0m
+[0;32mI (527116) TAG: ========================================[0m
+[0;32mI (527116) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (527126) TAG: ========================================[0m
+[0;33mW (528126) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 87 mSec[0m
+[0;33mW (528126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (528436) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 45.647 nSec, Avg RSSI: -68[0m
+[0;32mI (528436) TAG: FTM OK — RTT: 45647 ps  entries: 14[0m
+[0;32mI (528446) TAG:   TOF_ANCHOR_62 → RTT: 45647 ps  Dist: 684.7 cm[0m
+[0;33mW (528646) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 40 mSec[0m
+[0;33mW (528646) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (528906) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 48.103 nSec, Avg RSSI: -67[0m
+[0;32mI (528916) TAG: FTM OK — RTT: 48103 ps  entries: 14[0m
+[0;32mI (528916) TAG:   TOF_ANCHOR_61 → RTT: 48103 ps  Dist: 721.5 cm[0m
+[0;32mI (529126) TAG: Position: X=153.9 cm  Y=0.0 cm[0m
+[1;31mE (529126) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (529126) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (529136) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (529136) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (534036) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (534036) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (534036) TAG: Total anchors found: 2[0m
+[0;32mI (534046) TAG: ========================================[0m
+[0;32mI (534046) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (534056) TAG: ========================================[0m
+[0;33mW (534056) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 56 mSec[0m
+[0;33mW (534066) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (534336) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 82.933 nSec, Avg RSSI: -66[0m
+[0;32mI (534336) TAG: FTM OK — RTT: 82933 ps  entries: 13[0m
+[0;32mI (534346) TAG:   TOF_ANCHOR_61 → RTT: 82933 ps  Dist: 1244.0 cm[0m
+[0;33mW (534546) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (534546) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (534786) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 53.460 nSec, Avg RSSI: -63[0m
+[0;32mI (534786) TAG: FTM OK — RTT: 53460 ps  entries: 14[0m
+[0;32mI (534786) TAG:   TOF_ANCHOR_62 → RTT: 53460 ps  Dist: 801.9 cm[0m
+[0;32mI (534996) TAG: Position: X=182.4 cm  Y=0.0 cm[0m
+[1;31mE (534996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (534996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (535006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (535006) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (539906) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (539906) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (539906) TAG: Total anchors found: 2[0m
+[0;32mI (539916) TAG: ========================================[0m
+[0;32mI (539916) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (539926) TAG: ========================================[0m
+[0;33mW (539926) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 63 mSec[0m
+[0;33mW (539936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (540216) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.161 nSec, Avg RSSI: -65[0m
+[0;32mI (540216) TAG: FTM OK — RTT: 61161 ps  entries: 14[0m
+[0;32mI (540216) TAG:   TOF_ANCHOR_62 → RTT: 61161 ps  Dist: 917.4 cm[0m
+[0;33mW (540426) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 36 mSec[0m
+[0;33mW (540426) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (540696) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 73.549 nSec, Avg RSSI: -67[0m
+[0;32mI (540696) TAG: FTM OK — RTT: 73549 ps  entries: 14[0m
+[0;32mI (540706) TAG:   TOF_ANCHOR_61 → RTT: 73549 ps  Dist: 1103.2 cm[0m
+[0;32mI (540906) TAG: Position: X=163.8 cm  Y=0.0 cm[0m
+[1;31mE (540906) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (540906) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (540916) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (540916) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (545816) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (545816) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (545816) TAG: Total anchors found: 2[0m
+[0;32mI (545826) TAG: ========================================[0m
+[0;32mI (545826) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (545836) TAG: ========================================[0m
+[0;33mW (545836) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 54 mSec[0m
+[0;33mW (545846) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (546116) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 61.899 nSec, Avg RSSI: -65[0m
+[0;32mI (546116) TAG: FTM OK — RTT: 61899 ps  entries: 13[0m
+[0;32mI (546126) TAG:   TOF_ANCHOR_61 → RTT: 61899 ps  Dist: 928.5 cm[0m
+[0;33mW (546326) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (546326) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (546556) wifi:FTM session ends with 12 valid readings out of 12 readings received, Avg raw RTT: 89.453 nSec, Avg RSSI: -69[0m
+[0;32mI (546566) TAG: FTM OK — RTT: 89453 ps  entries: 12[0m
+[0;32mI (546566) TAG:   TOF_ANCHOR_62 → RTT: 89453 ps  Dist: 1341.8 cm[0m
+[0;32mI (546776) TAG: Position: X=122.7 cm  Y=0.0 cm[0m
+[1;31mE (546776) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (546776) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (546786) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (546786) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (551686) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (551686) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (551686) TAG: Total anchors found: 2[0m
+[0;32mI (551696) TAG: ========================================[0m
+[0;32mI (551696) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (551706) TAG: ========================================[0m
+[0;33mW (551706) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 20 mSec[0m
+[0;33mW (551716) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (551956) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 83.371 nSec, Avg RSSI: -64[0m
+[0;32mI (551956) TAG: FTM OK — RTT: 83371 ps  entries: 14[0m
+[0;32mI (551956) TAG:   TOF_ANCHOR_61 → RTT: 83371 ps  Dist: 1250.6 cm[0m
+[0;33mW (552166) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 8 mSec[0m
+[0;33mW (552166) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (552396) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 58.293 nSec, Avg RSSI: -64[0m
+[0;32mI (552406) TAG: FTM OK — RTT: 58293 ps  entries: 13[0m
+[0;32mI (552406) TAG:   TOF_ANCHOR_62 → RTT: 58293 ps  Dist: 874.4 cm[0m
+[0;32mI (552606) TAG: Position: X=176.5 cm  Y=0.0 cm[0m
+[1;31mE (552606) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (552606) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (552616) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (552616) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (557516) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (557516) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (557516) TAG: Total anchors found: 2[0m
+[0;32mI (557526) TAG: ========================================[0m
+[0;32mI (557526) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (557536) TAG: ========================================[0m
+[0;33mW (557536) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 27 mSec[0m
+[0;33mW (557546) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (557786) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 68.639 nSec, Avg RSSI: -64[0m
+[0;32mI (557796) TAG: FTM OK — RTT: 68639 ps  entries: 14[0m
+[0;32mI (557796) TAG:   TOF_ANCHOR_61 → RTT: 68639 ps  Dist: 1029.6 cm[0m
+[0;33mW (558006) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 6 mSec[0m
+[0;33mW (558006) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (558236) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 68.973 nSec, Avg RSSI: -69[0m
+[0;32mI (558236) TAG: FTM OK — RTT: 68973 ps  entries: 14[0m
+[0;32mI (558236) TAG:   TOF_ANCHOR_62 → RTT: 68973 ps  Dist: 1034.6 cm[0m
+[0;32mI (558446) TAG: Position: X=149.6 cm  Y=0.0 cm[0m
+[1;31mE (558446) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (558446) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (558456) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (558456) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (563356) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (563356) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (563356) TAG: Total anchors found: 2[0m
+[0;32mI (563366) TAG: ========================================[0m
+[0;32mI (563366) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (563376) TAG: ========================================[0m
+[0;33mW (563376) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 63 mSec[0m
+[0;33mW (563386) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (563666) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.763 nSec, Avg RSSI: -68[0m
+[0;32mI (563666) TAG: FTM OK — RTT: 71763 ps  entries: 14[0m
+[0;32mI (563676) TAG:   TOF_ANCHOR_62 → RTT: 71763 ps  Dist: 1076.4 cm[0m
+[0;33mW (563876) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 36 mSec[0m
+[0;33mW (563876) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (564136) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 99.519 nSec, Avg RSSI: -69[0m
+[0;32mI (564136) TAG: FTM OK — RTT: 99519 ps  entries: 13[0m
+[0;32mI (564136) TAG:   TOF_ANCHOR_61 → RTT: 99519 ps  Dist: 1492.8 cm[0m
+[0;32mI (564346) TAG: Position: X=174.3 cm  Y=0.0 cm[0m
+[1;31mE (564346) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (564346) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (564356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (564356) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (569256) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (569256) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (569256) TAG: Total anchors found: 2[0m
+[0;32mI (569266) TAG: ========================================[0m
+[0;32mI (569266) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (569276) TAG: ========================================[0m
+[0;33mW (569276) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 102 mSec[0m
+[0;33mW (569286) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (569606) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 51.116 nSec, Avg RSSI: -66[0m
+[0;32mI (569606) TAG: FTM OK — RTT: 51116 ps  entries: 14[0m
+[0;32mI (569606) TAG:   TOF_ANCHOR_62 → RTT: 51116 ps  Dist: 766.7 cm[0m
+[0;33mW (569816) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 35 mSec[0m
+[0;33mW (569816) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (570076) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 33.534 nSec, Avg RSSI: -63[0m
+[0;32mI (570076) TAG: FTM OK — RTT: 33534 ps  entries: 13[0m
+[0;32mI (570076) TAG:   TOF_ANCHOR_61 → RTT: 33534 ps  Dist: 503.0 cm[0m
+[0;32mI (570286) TAG: Position: X=118.9 cm  Y=0.0 cm[0m
+[1;31mE (570286) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (570286) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (570296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (570296) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (575196) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (575196) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (575196) TAG: Total anchors found: 2[0m
+[0;32mI (575206) TAG: ========================================[0m
+[0;32mI (575206) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (575216) TAG: ========================================[0m
+[0;33mW (575216) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 63 mSec[0m
+[0;33mW (575226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (575506) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 32.478 nSec, Avg RSSI: -61[0m
+[0;32mI (575506) TAG: FTM OK — RTT: 32478 ps  entries: 14[0m
+[0;32mI (575506) TAG:   TOF_ANCHOR_61 → RTT: 32478 ps  Dist: 487.2 cm[0m
+[0;33mW (575716) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (575716) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (575946) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 135.268 nSec, Avg RSSI: -74[0m
+[0;32mI (575956) TAG: FTM OK — RTT: 135268 ps  entries: 14[0m
+[0;32mI (575956) TAG:   TOF_ANCHOR_62 → RTT: 135268 ps  Dist: 2029.0 cm[0m
+[0;32mI (576166) TAG: Position: X=58.2 cm  Y=0.0 cm[0m
+[1;31mE (576166) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (576166) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (576176) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (576176) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (581076) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (581076) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (581076) TAG: Total anchors found: 2[0m
+[0;32mI (581086) TAG: ========================================[0m
+[0;32mI (581086) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (581096) TAG: ========================================[0m
+[0;33mW (581096) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 19 mSec[0m
+[0;33mW (581106) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (581346) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 39.397 nSec, Avg RSSI: -62[0m
+[0;32mI (581346) TAG: FTM OK — RTT: 39397 ps  entries: 14[0m
+[0;32mI (581346) TAG:   TOF_ANCHOR_61 → RTT: 39397 ps  Dist: 591.0 cm[0m
+[0;33mW (581556) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (581556) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (581786) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 134.152 nSec, Avg RSSI: -74[0m
+[0;32mI (581786) TAG: FTM OK — RTT: 134152 ps  entries: 14[0m
+[0;32mI (581796) TAG:   TOF_ANCHOR_62 → RTT: 134152 ps  Dist: 2012.3 cm[0m
+[0;32mI (581996) TAG: Position: X=68.2 cm  Y=0.0 cm[0m
+[1;31mE (581996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (581996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (582006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (582006) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (586906) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (586906) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (586906) TAG: Total anchors found: 2[0m
+[0;32mI (586916) TAG: ========================================[0m
+[0;32mI (586916) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (586926) TAG: ========================================[0m
+[0;33mW (586926) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 26 mSec[0m
+[0;33mW (586936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (587176) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 31.585 nSec, Avg RSSI: -62[0m
+[0;32mI (587176) TAG: FTM OK — RTT: 31585 ps  entries: 14[0m
+[0;32mI (587186) TAG:   TOF_ANCHOR_61 → RTT: 31585 ps  Dist: 473.8 cm[0m
+[0;33mW (587386) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (587386) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (587626) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 112.53 nSec, Avg RSSI: -73[0m
+[0;32mI (587626) TAG: FTM OK — RTT: 112053 ps  entries: 14[0m
+[0;32mI (587626) TAG:   TOF_ANCHOR_62 → RTT: 112053 ps  Dist: 1680.8 cm[0m
+[0;32mI (587836) TAG: Position: X=66.0 cm  Y=0.0 cm[0m
+[1;31mE (587836) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (587836) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (587846) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (587846) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (592746) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (592746) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (592746) TAG: Total anchors found: 2[0m
+[0;32mI (592756) TAG: ========================================[0m
+[0;32mI (592756) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (592766) TAG: ========================================[0m
+[0;33mW (592766) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 23 mSec[0m
+[0;33mW (592776) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (593016) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 39.63 nSec, Avg RSSI: -63[0m
+[0;32mI (593016) TAG: FTM OK — RTT: 39063 ps  entries: 14[0m
+[0;32mI (593016) TAG:   TOF_ANCHOR_61 → RTT: 39063 ps  Dist: 585.9 cm[0m
+[0;33mW (593226) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 12 mSec[0m
+[0;33mW (593226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (593456) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.942 nSec, Avg RSSI: -66[0m
+[0;32mI (593466) TAG: FTM OK — RTT: 61942 ps  entries: 14[0m
+[0;32mI (593466) TAG:   TOF_ANCHOR_62 → RTT: 61942 ps  Dist: 929.1 cm[0m
+[0;32mI (593676) TAG: Position: X=116.1 cm  Y=0.0 cm[0m
+[1;31mE (593676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (593676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (593686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (593686) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (598586) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (598586) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (598586) TAG: Total anchors found: 2[0m
+[0;32mI (598596) TAG: ========================================[0m
+[0;32mI (598596) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (598606) TAG: ========================================[0m
+[0;33mW (598606) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 19 mSec[0m
+[0;33mW (598616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (598856) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 43.81 nSec, Avg RSSI: -64[0m
+[0;32mI (598856) TAG: FTM OK — RTT: 43081 ps  entries: 14[0m
+[0;32mI (598856) TAG:   TOF_ANCHOR_61 → RTT: 43081 ps  Dist: 646.2 cm[0m
+[0;33mW (599066) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (599066) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (599296) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 58.482 nSec, Avg RSSI: -65[0m
+[0;32mI (599296) TAG: FTM OK — RTT: 58482 ps  entries: 14[0m
+[0;32mI (599306) TAG:   TOF_ANCHOR_62 → RTT: 58482 ps  Dist: 877.2 cm[0m
+[0;32mI (599506) TAG: Position: X=127.3 cm  Y=0.0 cm[0m
+[1;31mE (599506) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (599506) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (599516) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (599516) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (604416) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (604416) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (604416) TAG: Total anchors found: 2[0m
+[0;32mI (604426) TAG: ========================================[0m
+[0;32mI (604426) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (604436) TAG: ========================================[0m
+[0;33mW (604436) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 65 mSec[0m
+[0;33mW (604446) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (604726) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 113.951 nSec, Avg RSSI: -69[0m
+[0;32mI (604726) TAG: FTM OK — RTT: 113951 ps  entries: 14[0m
+[0;32mI (604736) TAG:   TOF_ANCHOR_62 → RTT: 113951 ps  Dist: 1709.3 cm[0m
+[0;33mW (604936) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (604936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (605196) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 89.621 nSec, Avg RSSI: -67[0m
+[0;32mI (605196) TAG: FTM OK — RTT: 89621 ps  entries: 14[0m
+[0;32mI (605206) TAG:   TOF_ANCHOR_61 → RTT: 89621 ps  Dist: 1344.3 cm[0m
+[0;32mI (605406) TAG: Position: X=132.1 cm  Y=0.0 cm[0m
+[1;31mE (605406) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (605406) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (605416) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (605416) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (610316) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (610316) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (610316) TAG: Total anchors found: 2[0m
+[0;32mI (610326) TAG: ========================================[0m
+[0;32mI (610326) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (610336) TAG: ========================================[0m
+[0;33mW (610336) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (610346) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (610626) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 56.10 nSec, Avg RSSI: -63[0m
+[0;32mI (610626) TAG: FTM OK — RTT: 56010 ps  entries: 13[0m
+[0;32mI (610636) TAG:   TOF_ANCHOR_61 → RTT: 56010 ps  Dist: 840.1 cm[0m
+[0;33mW (610836) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (610836) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (611076) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 86.49 nSec, Avg RSSI: -67[0m
+[0;32mI (611076) TAG: FTM OK — RTT: 86049 ps  entries: 14[0m
+[0;32mI (611076) TAG:   TOF_ANCHOR_62 → RTT: 86049 ps  Dist: 1290.7 cm[0m
+[0;32mI (611286) TAG: Position: X=118.3 cm  Y=0.0 cm[0m
+[1;31mE (611286) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (611286) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (611296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (611296) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (616196) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (616196) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (616196) TAG: Total anchors found: 2[0m
+[0;32mI (616206) TAG: ========================================[0m
+[0;32mI (616206) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (616216) TAG: ========================================[0m
+[0;33mW (616216) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 61 mSec[0m
+[0;33mW (616226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (616506) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 78.125 nSec, Avg RSSI: -66[0m
+[0;32mI (616506) TAG: FTM OK — RTT: 78125 ps  entries: 14[0m
+[0;32mI (616506) TAG:   TOF_ANCHOR_62 → RTT: 78125 ps  Dist: 1171.9 cm[0m
+[0;33mW (616716) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 34 mSec[0m
+[0;33mW (616716) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (616976) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 60.714 nSec, Avg RSSI: -65[0m
+[0;32mI (616976) TAG: FTM OK — RTT: 60714 ps  entries: 14[0m
+[0;32mI (616976) TAG:   TOF_ANCHOR_61 → RTT: 60714 ps  Dist: 910.7 cm[0m
+[0;32mI (617186) TAG: Position: X=131.2 cm  Y=0.0 cm[0m
+[1;31mE (617186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (617186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (617196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (617196) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (622096) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (622096) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (622096) TAG: Total anchors found: 2[0m
+[0;32mI (622106) TAG: ========================================[0m
+[0;32mI (622106) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (622116) TAG: ========================================[0m
+[0;33mW (622116) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 62 mSec[0m
+[0;33mW (622126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (622406) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 71.875 nSec, Avg RSSI: -64[0m
+[0;32mI (622406) TAG: FTM OK — RTT: 71875 ps  entries: 14[0m
+[0;32mI (622406) TAG:   TOF_ANCHOR_61 → RTT: 71875 ps  Dist: 1078.1 cm[0m
+[0;33mW (622616) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 11 mSec[0m
+[0;33mW (622616) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (622846) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 69.308 nSec, Avg RSSI: -66[0m
+[0;32mI (622856) TAG: FTM OK — RTT: 69308 ps  entries: 14[0m
+[0;32mI (622856) TAG:   TOF_ANCHOR_62 → RTT: 69308 ps  Dist: 1039.6 cm[0m
+[0;32mI (623056) TAG: Position: X=152.7 cm  Y=0.0 cm[0m
+[1;31mE (623056) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (623056) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (623066) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (623066) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (627966) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (627966) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (627966) TAG: Total anchors found: 2[0m
+[0;32mI (627976) TAG: ========================================[0m
+[0;32mI (627976) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (627986) TAG: ========================================[0m
+[0;33mW (627986) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 28 mSec[0m
+[0;33mW (627996) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (628246) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 80.649 nSec, Avg RSSI: -66[0m
+[0;32mI (628246) TAG: FTM OK — RTT: 80649 ps  entries: 13[0m
+[0;32mI (628246) TAG:   TOF_ANCHOR_61 → RTT: 80649 ps  Dist: 1209.7 cm[0m
+[0;33mW (628456) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 7 mSec[0m
+[0;33mW (628456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (628686) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 72.433 nSec, Avg RSSI: -66[0m
+[0;32mI (628686) TAG: FTM OK — RTT: 72433 ps  entries: 14[0m
+[0;32mI (628696) TAG:   TOF_ANCHOR_62 → RTT: 72433 ps  Dist: 1086.5 cm[0m
+[0;32mI (628896) TAG: Position: X=158.0 cm  Y=0.0 cm[0m
+[1;31mE (628896) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (628896) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (628906) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (628906) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (633806) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (633806) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (633806) TAG: Total anchors found: 2[0m
+[0;32mI (633816) TAG: ========================================[0m
+[0;32mI (633816) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (633826) TAG: ========================================[0m
+[0;33mW (633826) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 25 mSec[0m
+[0;33mW (633836) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (634076) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 86.779 nSec, Avg RSSI: -66[0m
+[0;32mI (634076) TAG: FTM OK — RTT: 86779 ps  entries: 13[0m
+[0;32mI (634086) TAG:   TOF_ANCHOR_61 → RTT: 86779 ps  Dist: 1301.7 cm[0m
+[0;33mW (634286) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 14 mSec[0m
+[0;33mW (634286) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (634526) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 75.558 nSec, Avg RSSI: -67[0m
+[0;32mI (634526) TAG: FTM OK — RTT: 75558 ps  entries: 14[0m
+[0;32mI (634526) TAG:   TOF_ANCHOR_62 → RTT: 75558 ps  Dist: 1133.4 cm[0m
+[0;32mI (634736) TAG: Position: X=160.4 cm  Y=0.0 cm[0m
+[1;31mE (634736) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (634736) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (634746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (634746) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (639646) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (639646) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (639646) TAG: Total anchors found: 2[0m
+[0;32mI (639656) TAG: ========================================[0m
+[0;32mI (639656) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (639666) TAG: ========================================[0m
+[0;33mW (639666) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 61 mSec[0m
+[0;33mW (639676) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (639956) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 58.594 nSec, Avg RSSI: -67[0m
+[0;32mI (639956) TAG: FTM OK — RTT: 58594 ps  entries: 14[0m
+[0;32mI (639956) TAG:   TOF_ANCHOR_62 → RTT: 58594 ps  Dist: 878.9 cm[0m
+[0;33mW (640166) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 34 mSec[0m
+[0;33mW (640166) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (640426) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 80.22 nSec, Avg RSSI: -64[0m
+[0;32mI (640426) TAG: FTM OK — RTT: 80022 ps  entries: 14[0m
+[0;32mI (640426) TAG:   TOF_ANCHOR_61 → RTT: 80022 ps  Dist: 1200.3 cm[0m
+[0;32mI (640636) TAG: Position: X=173.2 cm  Y=0.0 cm[0m
+[1;31mE (640636) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (640636) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (640646) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (640646) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (645546) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (645546) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (645546) TAG: Total anchors found: 2[0m
+[0;32mI (645556) TAG: ========================================[0m
+[0;32mI (645556) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (645566) TAG: ========================================[0m
+[0;33mW (645566) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 100 mSec[0m
+[0;33mW (645576) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (645896) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.723 nSec, Avg RSSI: -64[0m
+[0;32mI (645896) TAG: FTM OK — RTT: 62723 ps  entries: 14[0m
+[0;32mI (645896) TAG:   TOF_ANCHOR_62 → RTT: 62723 ps  Dist: 940.8 cm[0m
+[0;33mW (646106) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 33 mSec[0m
+[0;33mW (646106) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (646366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 81.362 nSec, Avg RSSI: -63[0m
+[0;32mI (646366) TAG: FTM OK — RTT: 81362 ps  entries: 14[0m
+[0;32mI (646366) TAG:   TOF_ANCHOR_61 → RTT: 81362 ps  Dist: 1220.4 cm[0m
+[0;32mI (646576) TAG: Position: X=169.4 cm  Y=0.0 cm[0m
+[1;31mE (646576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (646576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (646586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (646586) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (651486) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (651486) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (651486) TAG: Total anchors found: 2[0m
+[0;32mI (651496) TAG: ========================================[0m
+[0;32mI (651496) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (651506) TAG: ========================================[0m
+[0;33mW (651506) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 100 mSec[0m
+[0;33mW (651516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (651836) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 63.170 nSec, Avg RSSI: -63[0m
+[0;32mI (651836) TAG: FTM OK — RTT: 63170 ps  entries: 14[0m
+[0;32mI (651836) TAG:   TOF_ANCHOR_62 → RTT: 63170 ps  Dist: 947.5 cm[0m
+[0;33mW (652046) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 32 mSec[0m
+[0;33mW (652046) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (652306) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 82.478 nSec, Avg RSSI: -64[0m
+[0;32mI (652306) TAG: FTM OK — RTT: 82478 ps  entries: 14[0m
+[0;32mI (652306) TAG:   TOF_ANCHOR_61 → RTT: 82478 ps  Dist: 1237.2 cm[0m
+[0;32mI (652516) TAG: Position: X=169.9 cm  Y=0.0 cm[0m
+[1;31mE (652516) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (652516) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (652526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (652526) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (657426) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (657426) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (657426) TAG: Total anchors found: 2[0m
+[0;32mI (657436) TAG: ========================================[0m
+[0;32mI (657436) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (657446) TAG: ========================================[0m
+[0;33mW (657446) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 99 mSec[0m
+[0;33mW (657456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (657776) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 68.862 nSec, Avg RSSI: -62[0m
+[0;32mI (657776) TAG: FTM OK — RTT: 68862 ps  entries: 14[0m
+[0;32mI (657776) TAG:   TOF_ANCHOR_62 → RTT: 68862 ps  Dist: 1032.9 cm[0m
+[0;33mW (657986) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 32 mSec[0m
+[0;33mW (657986) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (658246) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 75.446 nSec, Avg RSSI: -65[0m
+[0;32mI (658246) TAG: FTM OK — RTT: 75446 ps  entries: 14[0m
+[0;32mI (658246) TAG:   TOF_ANCHOR_61 → RTT: 75446 ps  Dist: 1131.7 cm[0m
+[0;32mI (658456) TAG: Position: X=156.8 cm  Y=0.0 cm[0m
+[1;31mE (658456) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (658456) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (658466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (658466) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (663366) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (663366) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (663366) TAG: Total anchors found: 2[0m
+[0;32mI (663376) TAG: ========================================[0m
+[0;32mI (663376) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (663386) TAG: ========================================[0m
+[0;33mW (663386) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 59 mSec[0m
+[0;33mW (663396) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (663686) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 122.321 nSec, Avg RSSI: -72[0m
+[0;32mI (663686) TAG: FTM OK — RTT: 122321 ps  entries: 7[0m
+[0;32mI (663686) TAG:   TOF_ANCHOR_61 → RTT: 122321 ps  Dist: 1834.8 cm[0m
+[0;33mW (663896) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 100 mSec[0m
+[0;33mW (663896) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (664216) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.835 nSec, Avg RSSI: -66[0m
+[0;32mI (664216) TAG: FTM OK — RTT: 62835 ps  entries: 14[0m
+[0;32mI (664226) TAG:   TOF_ANCHOR_62 → RTT: 62835 ps  Dist: 942.5 cm[0m
+[0;32mI (664426) TAG: Position: X=198.2 cm  Y=0.0 cm[0m
+[1;31mE (664426) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (664426) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (664436) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (664436) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (669336) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (669336) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (669336) TAG: Total anchors found: 2[0m
+[0;32mI (669346) TAG: ========================================[0m
+[0;32mI (669346) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (669356) TAG: ========================================[0m
+[0;33mW (669356) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 67 mSec[0m
+[0;33mW (669366) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (669646) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 68.192 nSec, Avg RSSI: -67[0m
+[0;32mI (669656) TAG: FTM OK — RTT: 68192 ps  entries: 14[0m
+[0;32mI (669656) TAG:   TOF_ANCHOR_62 → RTT: 68192 ps  Dist: 1022.9 cm[0m
+[0;33mW (669856) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 40 mSec[0m
+[0;33mW (669856) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (670116) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 89.509 nSec, Avg RSSI: -66[0m
+[0;32mI (670116) TAG: FTM OK — RTT: 89509 ps  entries: 14[0m
+[0;32mI (670126) TAG:   TOF_ANCHOR_61 → RTT: 89509 ps  Dist: 1342.6 cm[0m
+[0;32mI (670326) TAG: Position: X=170.3 cm  Y=0.0 cm[0m
+[1;31mE (670326) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (670326) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (670336) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (670336) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (675236) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (675236) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (675236) TAG: Total anchors found: 2[0m
+[0;32mI (675246) TAG: ========================================[0m
+[0;32mI (675246) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (675256) TAG: ========================================[0m
+[0;33mW (675256) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 105 mSec[0m
+[0;33mW (675266) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (675586) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 61.831 nSec, Avg RSSI: -63[0m
+[0;32mI (675586) TAG: FTM OK — RTT: 61831 ps  entries: 14[0m
+[0;32mI (675596) TAG:   TOF_ANCHOR_62 → RTT: 61831 ps  Dist: 927.5 cm[0m
+[0;33mW (675796) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (675796) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (676056) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 65.960 nSec, Avg RSSI: -65[0m
+[0;32mI (676056) TAG: FTM OK — RTT: 65960 ps  entries: 14[0m
+[0;32mI (676066) TAG:   TOF_ANCHOR_61 → RTT: 65960 ps  Dist: 989.4 cm[0m
+[0;32mI (676266) TAG: Position: X=154.8 cm  Y=0.0 cm[0m
+[1;31mE (676266) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (676266) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (676276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (676276) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (681176) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (681176) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (681176) TAG: Total anchors found: 2[0m
+[0;32mI (681186) TAG: ========================================[0m
+[0;32mI (681186) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (681196) TAG: ========================================[0m
+[0;33mW (681196) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 105 mSec[0m
+[0;33mW (681206) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (681526) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 57.366 nSec, Avg RSSI: -63[0m
+[0;32mI (681526) TAG: FTM OK — RTT: 57366 ps  entries: 14[0m
+[0;32mI (681536) TAG:   TOF_ANCHOR_62 → RTT: 57366 ps  Dist: 860.5 cm[0m
+[0;33mW (681736) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 38 mSec[0m
+[0;33mW (681736) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (681996) wifi:FTM session ends with 13 valid readings out of 13 readings received, Avg raw RTT: 38.702 nSec, Avg RSSI: -67[0m
+[0;32mI (681996) TAG: FTM OK — RTT: 38702 ps  entries: 13[0m
+[0;32mI (682006) TAG:   TOF_ANCHOR_61 → RTT: 38702 ps  Dist: 580.5 cm[0m
+[0;32mI (682206) TAG: Position: X=120.9 cm  Y=0.0 cm[0m
+[1;31mE (682206) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (682206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (682216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (682216) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (687116) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (687116) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (687116) TAG: Total anchors found: 2[0m
+[0;32mI (687126) TAG: ========================================[0m
+[0;32mI (687126) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (687136) TAG: ========================================[0m
+[0;33mW (687136) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 66 mSec[0m
+[0;33mW (687146) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (687426) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 37.53 nSec, Avg RSSI: -67[0m
+[0;32mI (687426) TAG: FTM OK — RTT: 37053 ps  entries: 14[0m
+[0;32mI (687436) TAG:   TOF_ANCHOR_61 → RTT: 37053 ps  Dist: 555.8 cm[0m
+[0;33mW (687636) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 15 mSec[0m
+[0;33mW (687636) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (687876) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 57.478 nSec, Avg RSSI: -62[0m
+[0;32mI (687876) TAG: FTM OK — RTT: 57478 ps  entries: 14[0m
+[0;32mI (687876) TAG:   TOF_ANCHOR_62 → RTT: 57478 ps  Dist: 862.2 cm[0m
+[0;32mI (688086) TAG: Position: X=117.6 cm  Y=0.0 cm[0m
+[1;31mE (688086) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (688086) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (688096) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (688096) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (692996) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (692996) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (692996) TAG: Total anchors found: 2[0m
+[0;32mI (693006) TAG: ========================================[0m
+[0;32mI (693006) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (693016) TAG: ========================================[0m
+[0;33mW (693016) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 62 mSec[0m
+[0;33mW (693026) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (693306) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 56.585 nSec, Avg RSSI: -61[0m
+[0;32mI (693306) TAG: FTM OK — RTT: 56585 ps  entries: 14[0m
+[0;32mI (693306) TAG:   TOF_ANCHOR_62 → RTT: 56585 ps  Dist: 848.8 cm[0m
+[0;33mW (693516) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 34 mSec[0m
+[0;33mW (693516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (693786) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 26.562 nSec, Avg RSSI: -65[0m
+[0;32mI (693786) TAG: FTM OK — RTT: 26562 ps  entries: 14[0m
+[0;32mI (693796) TAG:   TOF_ANCHOR_61 → RTT: 26562 ps  Dist: 398.4 cm[0m
+[0;32mI (693996) TAG: Position: X=95.9 cm  Y=0.0 cm[0m
+[1;31mE (693996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (693996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (694006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (694006) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (698906) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (698906) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (698906) TAG: Total anchors found: 2[0m
+[0;32mI (698916) TAG: ========================================[0m
+[0;32mI (698916) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (698926) TAG: ========================================[0m
+[0;33mW (698926) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 91 mSec[0m
+[0;33mW (698936) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (699246) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 56.808 nSec, Avg RSSI: -69[0m
+[0;32mI (699246) TAG: FTM OK — RTT: 56808 ps  entries: 14[0m
+[0;32mI (699246) TAG:   TOF_ANCHOR_62 → RTT: 56808 ps  Dist: 852.1 cm[0m
+[0;33mW (699456) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 33 mSec[0m
+[0;33mW (699456) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (699716) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 30.357 nSec, Avg RSSI: -62[0m
+[0;32mI (699716) TAG: FTM OK — RTT: 30357 ps  entries: 14[0m
+[0;32mI (699716) TAG:   TOF_ANCHOR_61 → RTT: 30357 ps  Dist: 455.4 cm[0m
+[0;32mI (699926) TAG: Position: X=104.6 cm  Y=0.0 cm[0m
+[1;31mE (699926) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (699926) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (699936) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (699936) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (704836) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (704836) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (704836) TAG: Total anchors found: 2[0m
+[0;32mI (704846) TAG: ========================================[0m
+[0;32mI (704846) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (704856) TAG: ========================================[0m
+[0;33mW (704856) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 61 mSec[0m
+[0;33mW (704866) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (705146) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 28.460 nSec, Avg RSSI: -62[0m
+[0;32mI (705146) TAG: FTM OK — RTT: 28460 ps  entries: 14[0m
+[0;32mI (705146) TAG:   TOF_ANCHOR_61 → RTT: 28460 ps  Dist: 426.9 cm[0m
+[0;33mW (705356) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 10 mSec[0m
+[0;33mW (705356) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (705586) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 51.786 nSec, Avg RSSI: -67[0m
+[0;32mI (705586) TAG: FTM OK — RTT: 51786 ps  entries: 14[0m
+[0;32mI (705596) TAG:   TOF_ANCHOR_62 → RTT: 51786 ps  Dist: 776.8 cm[0m
+[0;32mI (705796) TAG: Position: X=106.5 cm  Y=0.0 cm[0m
+[1;31mE (705796) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (705796) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (705806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (705806) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (710706) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (710706) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (710706) TAG: Total anchors found: 2[0m
+[0;32mI (710716) TAG: ========================================[0m
+[0;32mI (710716) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (710726) TAG: ========================================[0m
+[0;33mW (710726) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 67 mSec[0m
+[0;33mW (710736) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (711016) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 44.197 nSec, Avg RSSI: -67[0m
+[0;32mI (711016) TAG: FTM OK — RTT: 44197 ps  entries: 14[0m
+[0;32mI (711026) TAG:   TOF_ANCHOR_62 → RTT: 44197 ps  Dist: 663.0 cm[0m
+[0;33mW (711226) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 39 mSec[0m
+[0;33mW (711226) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (711486) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 63.58 nSec, Avg RSSI: -67[0m
+[0;32mI (711486) TAG: FTM OK — RTT: 63058 ps  entries: 14[0m
+[0;32mI (711496) TAG:   TOF_ANCHOR_61 → RTT: 63058 ps  Dist: 945.9 cm[0m
+[0;32mI (711696) TAG: Position: X=176.3 cm  Y=0.0 cm[0m
+[1;31mE (711696) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (711696) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (711706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (711706) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (716606) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (716606) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (716606) TAG: Total anchors found: 2[0m
+[0;32mI (716616) TAG: ========================================[0m
+[0;32mI (716616) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (716626) TAG: ========================================[0m
+[0;33mW (716626) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 65 mSec[0m
+[0;33mW (716636) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (716916) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.723 nSec, Avg RSSI: -64[0m
+[0;32mI (716916) TAG: FTM OK — RTT: 62723 ps  entries: 14[0m
+[0;32mI (716926) TAG:   TOF_ANCHOR_61 → RTT: 62723 ps  Dist: 940.8 cm[0m
+[0;33mW (717126) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 16 mSec[0m
+[0;33mW (717126) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (717366) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 57.254 nSec, Avg RSSI: -61[0m
+[0;32mI (717366) TAG: FTM OK — RTT: 57254 ps  entries: 14[0m
+[0;32mI (717366) TAG:   TOF_ANCHOR_62 → RTT: 57254 ps  Dist: 858.8 cm[0m
+[0;32mI (717576) TAG: Position: X=156.8 cm  Y=0.0 cm[0m
+[1;31mE (717576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (717576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (717586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (717586) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (722486) TAG: Found: TOF_ANCHOR_62  BSSID: 9c:13:9e:f3:ff:a5  CH: 11[0m
+[0;32mI (722486) TAG: Found: TOF_ANCHOR_61  BSSID: 9c:13:9e:f4:00:91  CH: 11[0m
+[0;32mI (722486) TAG: Total anchors found: 2[0m
+[0;32mI (722496) TAG: ========================================[0m
+[0;32mI (722496) TAG: FTM ranging — esp32s3_tag_0[0m
+[0;32mI (722506) TAG: ========================================[0m
+[0;33mW (722506) wifi:Starting FTM session with 9c:13:9e:f3:ff:a5 in 63 mSec[0m
+[0;33mW (722516) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (722796) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 62.500 nSec, Avg RSSI: -61[0m
+[0;32mI (722796) TAG: FTM OK — RTT: 62500 ps  entries: 14[0m
+[0;32mI (722796) TAG:   TOF_ANCHOR_62 → RTT: 62500 ps  Dist: 937.5 cm[0m
+[0;33mW (723006) wifi:Starting FTM session with 9c:13:9e:f4:00:91 in 35 mSec[0m
+[0;33mW (723006) wifi:Mode: non-ASAP, Bursts: 2, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (723266) wifi:FTM session ends with 14 valid readings out of 14 readings received, Avg raw RTT: 98.772 nSec, Avg RSSI: -67[0m
+[0;32mI (723266) TAG: FTM OK — RTT: 98772 ps  entries: 14[0m
+[0;32mI (723266) TAG:   TOF_ANCHOR_61 → RTT: 98772 ps  Dist: 1481.6 cm[0m
+[0;32mI (723476) TAG: Position: X=183.7 cm  Y=0.0 cm[0m
+[1;31mE (723476) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (723476) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (723486) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (723486) TAG: POST failed: ESP_ERR_HTTP_CONNECT[0m

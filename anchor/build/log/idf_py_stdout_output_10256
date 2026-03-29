@@ -1,0 +1,148 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\barzi\OneDrive\Desktop\ESP32-S3-ToF\anchor\build\bootloader && C:\Users\barzi\.espressif\python_env\idf6.0_py3.13_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/anchor_main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/anchor_main.c.obj 
+ccache C:\Users\barzi\.espressif\tools\xtensa-esp-elf\esp-15.2.0_20251204\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v6.0\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/config -IC:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main -IC:/esp/v6.0/esp-idf/components/esp_libc/platform_include -IC:/esp/v6.0/esp-idf/components/freertos/config/include -IC:/esp/v6.0/esp-idf/components/freertos/config/include/freertos -IC:/esp/v6.0/esp-idf/components/freertos/config/xtensa/include -IC:/esp/v6.0/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/v6.0/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/v6.0/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/esp/v6.0/esp-idf/components/freertos/esp_additions/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/include/soc -IC:/esp/v6.0/esp-idf/components/esp_hw_support/ldo/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/debug_probe/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/etm/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/power_supply/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/modem/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/include/soc/esp32s3 -IC:/esp/v6.0/esp-idf/components/esp_hw_support/port/esp32s3/. -IC:/esp/v6.0/esp-idf/components/esp_hw_support/port/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -IC:/esp/v6.0/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -IC:/esp/v6.0/esp-idf/components/heap/include -IC:/esp/v6.0/esp-idf/components/heap/tlsf -IC:/esp/v6.0/esp-idf/components/log/include -IC:/esp/v6.0/esp-idf/components/soc/include -IC:/esp/v6.0/esp-idf/components/soc/esp32s3 -IC:/esp/v6.0/esp-idf/components/soc/esp32s3/include -IC:/esp/v6.0/esp-idf/components/soc/esp32s3/register -IC:/esp/v6.0/esp-idf/components/hal/platform_port/include -IC:/esp/v6.0/esp-idf/components/hal/esp32s3/include -IC:/esp/v6.0/esp-idf/components/hal/include -IC:/esp/v6.0/esp-idf/components/esp_rom/include -IC:/esp/v6.0/esp-idf/components/esp_rom/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -IC:/esp/v6.0/esp-idf/components/esp_rom/esp32s3 -IC:/esp/v6.0/esp-idf/components/esp_common/include -IC:/esp/v6.0/esp-idf/components/esp_system/include -IC:/esp/v6.0/esp-idf/components/esp_system/port/soc -IC:/esp/v6.0/esp-idf/components/esp_system/port/include/private -IC:/esp/v6.0/esp-idf/components/esp_stdio/include -IC:/esp/v6.0/esp-idf/components/xtensa/esp32s3/include -IC:/esp/v6.0/esp-idf/components/xtensa/include -IC:/esp/v6.0/esp-idf/components/xtensa/deprecated_include -IC:/esp/v6.0/esp-idf/components/esp_hal_gpio/include -IC:/esp/v6.0/esp-idf/components/esp_hal_gpio/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_hal_usb/include -IC:/esp/v6.0/esp-idf/components/esp_hal_usb/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_hal_pmu/include -IC:/esp/v6.0/esp-idf/components/esp_hal_pmu/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_hal_ana_conv/include -IC:/esp/v6.0/esp-idf/components/esp_hal_ana_conv/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_hal_dma/include -IC:/esp/v6.0/esp-idf/components/esp_hal_dma/esp32s3/include -IC:/esp/v6.0/esp-idf/components/lwip/include -IC:/esp/v6.0/esp-idf/components/lwip/include/apps -IC:/esp/v6.0/esp-idf/components/lwip/lwip/src/include -IC:/esp/v6.0/esp-idf/components/lwip/port/include -IC:/esp/v6.0/esp-idf/components/lwip/port/freertos/include -IC:/esp/v6.0/esp-idf/components/lwip/port/esp32xx/include -IC:/esp/v6.0/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/esp/v6.0/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/esp/v6.0/esp-idf/components/esp_wifi/include -IC:/esp/v6.0/esp-idf/components/esp_wifi/include/local -IC:/esp/v6.0/esp-idf/components/esp_wifi/wifi_apps/include -IC:/esp/v6.0/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/esp/v6.0/esp-idf/components/esp_event/include -IC:/esp/v6.0/esp-idf/components/esp_phy/include -IC:/esp/v6.0/esp-idf/components/esp_phy/esp32s3/include -IC:/esp/v6.0/esp-idf/components/esp_netif/include -IC:/esp/v6.0/esp-idf/components/nvs_flash/include -IC:/esp/v6.0/esp-idf/components/esp_partition/include -IC:/esp/v6.0/esp-idf/components/esp_blockdev/include -IC:/esp/v6.0/esp-idf/components/esp_timer/include @"C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/build/toolchain/cflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor=. -fmacro-prefix-map=C:/esp/v6.0/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/anchor_main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\anchor_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/anchor_main.c.obj -c C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c
+In file included from C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:20,
+                 from C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:17:
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c: In function 'wifi_init_apsta':
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:40: error: expected ')' before numeric constant
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |                                        ^~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:220:72: note: to match this '('
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:40: error: expected ')' before numeric constant
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |                                        ^~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:221:72: note: to match this '('
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:40: error: expected ')' before numeric constant
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |                                        ^~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:222:72: note: to match this '('
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:40: error: expected ')' before numeric constant
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |                                        ^~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:223:72: note: to match this '('
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:40: error: expected ')' before numeric constant
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |                                        ^~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:224:72: note: to match this '('
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+C:/esp/v6.0/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/main/anchor_main.c:164:5: note: in expansion of macro 'ESP_LOGI'
+  164 |     ESP_LOGI(TAG, "STA static IP set: "192, 168, 1, (uint8_t)ANCHOR_ID);
+      |     ^~~~~~~~
+ninja: build stopped: subcommand failed.

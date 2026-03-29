@@ -18,7 +18,7 @@ set(HEAD_HASH)
 file(READ "C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/tag/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "C:/esp/v6.0/esp-idf/.git")
+set(GIT_DIR "C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/.git")
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)

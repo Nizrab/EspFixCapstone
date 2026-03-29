@@ -8,4 +8,7 @@ idf_component_register(
         nvs_flash
         esp_timer
         esp_system
+        esp_http_client
+        esp-tls
 )
+target_link_libraries(${COMPONENT_LIB} PRIVATE m)

@@ -1,0 +1,22 @@
+Command: ninja all
+Configuration Report                                                           
++-----------------------------------------------------------------------------+
+|  Parser Version: 1                                                          |
+|  Verbosity: default                                                         |
+|  Defaults policy: sdkconfig                                                 |
+|  Status: Finished with notifications                                        |
+|                                                                             |
+| Disabled Symbols/Choices With User-Set Value                                |
+| +-------------------------------------------------------------------------+ |
+| | * IDF_TARGET (defined at C:/esp/v6.0/esp-idf/Kconfig:68) with user-set  | |
+| | value esp32s3 from                                                      | |
+| | C:\Users\barzi\AppData\Local\Temp\kconfgen_tmp59iayhs4                  | |
+| | * ESP_WIFI_ENABLED (defined at                                          | |
+| | C:/esp/v6.0/esp-idf/components/esp_wifi/Kconfig:4) with user-set value  | |
+| | y from C:\Users\barzi\AppData\Local\Temp\kconfgen_tmp59iayhs4           | |
+| | * MQTT_BUFFER_SIZE (defined at                                          | |
+| | C:/Users/barzi/OneDrive/Desktop/ESP32-S3-ToF/anchor/components/esp_mqtà | |
+| | with user-set value 1024 from                                           | |
+| | C:\Users\barzi\AppData\Local\Temp\kconfgen_tmp59iayhs4                  | |
+| +-------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------+
